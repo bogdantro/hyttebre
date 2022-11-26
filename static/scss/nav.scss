@@ -11,14 +11,20 @@
     z-index: 10000;
     transition: .2s;
     background: transparent;
+    // Nav img - bildet på høyre hjørne
+    .nav-img{
+        position: absolute;
+        right: 0;
+        top: -10px;
+    }
     // Logo
     .logo{
         width: max-content;
         h1{
-            font-size: 21px;
+            font-size: 22px;
             color: #003A65;
             span{
-                font-size: 14px;
+                font-size: 15px;
                 border-bottom: 1px solid #00396570;
                 padding-bottom: 2px;
                 margin-left: 4px;

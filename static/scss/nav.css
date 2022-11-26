@@ -11,17 +11,22 @@
   transition: 0.2s;
   background: transparent;
 }
+#mobileNav .nav-img {
+  position: absolute;
+  right: 0;
+  top: -10px;
+}
 #mobileNav .logo {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
 #mobileNav .logo h1 {
-  font-size: 21px;
+  font-size: 22px;
   color: #003A65;
 }
 #mobileNav .logo h1 span {
-  font-size: 14px;
+  font-size: 15px;
   border-bottom: 1px solid rgba(0, 57, 101, 0.4392156863);
   padding-bottom: 2px;
   margin-left: 4px;
