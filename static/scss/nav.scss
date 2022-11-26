@@ -17,6 +17,11 @@
         right: 0;
         top: -10px;
         pointer-events: none !important;
+        opacity: 1;
+        transition: .2s;
+        &.active{
+            opacity: 0;
+        }
     }
     // Logo
     .logo{
@@ -72,9 +77,18 @@
     .sidebar{
         opacity: 0;
         position: absolute;
-        right: 100%;
+        right: -100%;
+        top: 70px;
+        background: #c5f2f7;
+        transition: .5s;
+        width: 100%;
+        height: 100vh;
+        z-index: 10000000000000;
+        padding: 10px 30px;
         &.active{
+            right: 0;
             opacity: 1;
+            background: #E7FDFF;
         }
     }
 }
