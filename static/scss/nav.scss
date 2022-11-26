@@ -1,0 +1,43 @@
+// Mobil navigation
+#mobileNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    padding-inline: 25px;
+    // Logo
+    .logo{
+        width: max-content;
+        h1{
+            font-size: 22px;
+            color: #003A65;
+            font-weight: 600;
+            span{
+                font-size: 14px;
+                border-bottom: 1px solid #00396570;
+                padding-bottom: 2px;
+                margin-left: 4px;
+            }
+        }
+    }
+    // Hamburger
+    .hamburger{
+        padding: 8px;
+        margin: -8px;
+        display: flex;
+        align-items: center;
+        span{
+            width: 7px;
+            height: 7px;
+            background: #003A65;
+            display: block;
+            position: relative;
+            margin-inline: 7px;
+            border-radius: 100%;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
