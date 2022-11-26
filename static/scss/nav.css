@@ -4,7 +4,8 @@
   align-items: center;
   width: 100%;
   height: 65px;
-  padding-inline: 25px;
+  padding-inline: 20px;
+  padding-block: 3px;
 }
 #mobileNav .logo {
   width: -webkit-max-content;
@@ -12,9 +13,8 @@
   width: max-content;
 }
 #mobileNav .logo h1 {
-  font-size: 22px;
+  font-size: 21px;
   color: #003A65;
-  font-weight: 600;
 }
 #mobileNav .logo h1 span {
   font-size: 14px;
@@ -25,18 +25,23 @@
 #mobileNav .hamburger {
   padding: 8px;
   margin: -8px;
-  display: flex;
-  align-items: center;
 }
 #mobileNav .hamburger span {
-  width: 7px;
-  height: 7px;
+  width: 26px;
+  height: 2px;
   background: #003A65;
   display: block;
   position: relative;
-  margin-inline: 7px;
-  border-radius: 100%;
+  margin-block: 8px;
+  border-radius: 20px;
+}
+#mobileNav .hamburger span.center-span {
+  width: 16px;
+  margin: 8px auto;
+}
+#mobileNav .hamburger span:first-child {
+  margin-top: 0;
 }
 #mobileNav .hamburger span:last-child {
-  margin-right: 0;
+  margin-bottom: 0;
 }/*# sourceMappingURL=nav.css.map */
