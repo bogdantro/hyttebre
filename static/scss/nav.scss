@@ -16,6 +16,7 @@
         position: absolute;
         right: 0;
         top: -10px;
+        pointer-events: none !important;
     }
     // Logo
     .logo{
@@ -35,17 +36,29 @@
     .hamburger{
         padding: 8px;
         margin: -8px;
+        &.active{
+            .top-span{
+            }
+            .center-span{
+                height: 0;
+                width: 0;
+                transform: translateX(-10px);
+                opacity: 0;
+            }
+            .bottom-span{
+            }
+        }
         span{
+            transition: .4s;
             width: 26px;
             height: 2px;
             background: #003A65;
             display: block;
             position: relative;
-            margin-block: 8px;
             border-radius: 20px;
+            margin: 8px auto;
             &.center-span{
                 width: 16px;
-                margin: 8px auto;
             }
             &:first-child{
                 margin-top: 0;
@@ -53,6 +66,15 @@
             &:last-child{
                 margin-bottom: 0;
             }
+        }
+    }
+    // Sidebar
+    .sidebar{
+        opacity: 0;
+        position: absolute;
+        right: 100%;
+        &.active{
+            opacity: 1;
         }
     }
 }

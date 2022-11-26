@@ -15,6 +15,7 @@
   position: absolute;
   right: 0;
   top: -10px;
+  pointer-events: none !important;
 }
 #mobileNav .logo {
   width: -webkit-max-content;
@@ -35,22 +36,36 @@
   padding: 8px;
   margin: -8px;
 }
+#mobileNav .hamburger.active .center-span {
+  height: 0;
+  width: 0;
+  transform: translateX(-10px);
+  opacity: 0;
+}
 #mobileNav .hamburger span {
+  transition: 0.4s;
   width: 26px;
   height: 2px;
   background: #003A65;
   display: block;
   position: relative;
-  margin-block: 8px;
   border-radius: 20px;
+  margin: 8px auto;
 }
 #mobileNav .hamburger span.center-span {
   width: 16px;
-  margin: 8px auto;
 }
 #mobileNav .hamburger span:first-child {
   margin-top: 0;
 }
 #mobileNav .hamburger span:last-child {
   margin-bottom: 0;
+}
+#mobileNav .sidebar {
+  opacity: 0;
+  position: absolute;
+  right: 100%;
+}
+#mobileNav .sidebar.active {
+  opacity: 1;
 }/*# sourceMappingURL=nav.css.map */
