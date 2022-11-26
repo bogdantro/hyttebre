@@ -1,0 +1,267 @@
+// standard phone
+.page-for-form{
+    padding-bottom: 0;
+    transition: 1s;
+    top: 0;
+    width: 100%;
+    .contact-info-text{
+        display: none;
+    }
+    .bottom-cover{
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 25px;
+        pointer-events: visible;
+        opacity: 0.8;
+        z-index: 1000000000;
+        .bottom-cover-text{
+            margin: 0;
+            transition: .2s;
+            .bottom-text{
+                margin: 0;
+                font-size: 12px;
+                span{
+                    border-bottom: 1px solid #64ffdb8c;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+    .email{
+        display: none;
+    }
+    .socials{
+        display: none;
+    }
+    // form
+    form{
+        margin: 0 auto;
+        text-align: left;
+        width: 100%;
+        box-shadow: unset;
+        padding-inline: 35px;
+        position: relative;
+        top: 0;
+        // inputs and labels
+        .inputs-labels{
+            // label
+            label{
+                color: #F9F6EE;
+                font-size: 15px;
+                opacity: 0.9;
+                margin-bottom: 15px;
+                display: none;
+            }
+            // input & textarea
+            input, textarea{
+                padding: 5px;
+                padding-left: 8px;
+                border: none;
+                outline: none;
+                color: #F9F6EE;
+                opacity: 1;
+                font-size: 15px;
+                width: 100%;
+                max-width: 500px;
+                height: 45px;
+                cursor: pointer;
+                background: transparent;
+                transition: .1s;
+                border-bottom: 1px solid #64ffdb;
+                border-radius: 0;
+                &::placeholder{
+                    opacity: 0.3;
+                    color: #F9F6EE;
+                }
+                &:hover{
+                    background: #306b97;
+                    border-radius: 4px;
+                }
+                &:focus{
+                    background: transparent;
+                    border: 2px solid #64FFDA;
+                    border-radius: 4px;
+                }
+            }
+            // textarea
+            textarea{
+                min-height: 100px;
+                max-height: 300px;
+            }
+        }
+        // form actions
+        .form-actions{
+            margin-top: 35px;
+            text-align: center;
+            button{
+                width: 200px !important;
+                height: 56px !important;
+                opacity: 0.85;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-device-width: 1150px) {       
+    .width{
+        padding-inline: 0;
+    }
+    .page-for-form{
+        width: auto;
+        padding: 0;
+        position: relative;
+        top: 0;
+        .bottom-cover{
+            display: none;
+        }
+        .email{
+            display: flex;
+            align-items: center;
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            right: -180px;
+            bottom: 15px;
+            transform: rotate(-90deg);
+            opacity: 0.8;
+            overflow: hidden;
+            z-index: 10000;
+            span{
+                background: #64FFDA;
+                width: 300px;
+                height: 2px;
+                border-radius: 20px;
+            }
+            .small-paragraph{
+                margin-bottom: 0;
+                margin-left: 15px;
+                opacity: 1;
+                color: #64FFDA;
+                cursor: pointer;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .socials{
+            display: flex;
+            align-items: center;
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            left: -202.5px;
+            bottom: 15px;
+            transform: rotate(-90deg);
+            opacity: 0.7;
+            z-index: 10000;
+            span{
+                background: #64FFDA;
+                width: 300px;
+                height: 2px;
+                border-radius: 20px;
+                margin-right: 15px;
+            }
+            i{
+                color: #64FFDA;
+                cursor: pointer;
+                font-size: 21px;
+                padding: 5px;
+                margin: -5px;
+                margin-inline: 15px;
+                transform: rotate(90deg);
+                &:hover{
+                    transform: scale(1.1) rotate(90deg);
+                }
+            }
+        }
+        form{
+            position: relative;
+            top: 5px;
+            text-align: center;
+            width: auto;
+            padding: 0;
+            .inputs-labels{
+                input, textarea{
+                    font-size: 16px;
+                }
+                textarea{
+                    min-height: 90px;
+                    max-height: 350px;
+                }
+            }
+            .form-actions{
+                button{
+                    font-size: 15px;
+                    &:hover{
+                        background: #4180b191;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-device-width: 1450px) {
+    .width{
+        padding-inline: 38px !important;
+    }
+    .page-for-form{
+        height: 100vh;
+        .email{
+            right: -180px;
+            bottom: 300px;
+            span{
+                width: 300px;
+            }
+        }
+        .socials{
+            left: -200px;
+            bottom: 300px;
+            span{
+                width: 300px;
+            }
+        }
+        form{
+            top: 25px;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 1590px) {
+    .width{
+        padding-inline: 120px !important;
+    }
+    .page-for-form{
+        form{
+            top: 25px;
+            .inputs-labels{
+                textarea{
+                    min-height: 110px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-device-width: 1790px) {
+    .width{
+        padding-inline: 120px !important;
+    }
+    .page-for-form{
+        form{
+            top: 95px;
+            .inputs-labels{
+                textarea{
+                    min-height: 110px;
+                }
+            }
+        }
+    }
+}

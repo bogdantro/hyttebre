@@ -1,0 +1,202 @@
+// GLOBAL
+$loader: rgb(80, 104, 180);
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Alata', sans-serif;
+    box-sizing: border-box;
+  }
+  .body {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .body::-webkit-scrollbar { 
+      display: none;  /* Safari and Chrome */
+  } 
+  
+  // html, body {
+  //   background: #215074 !important;
+  //   overflow-x: hidden !important;
+  //   overflow-y: hidden !important;
+  //   scroll-behavior: smooth !important;
+  //   margin: 0 auto !important;
+  //   height: 100vh !important;
+  //   max-height: 100vh !important;
+  //   width: 100% !important;
+  // }
+  @media only screen and (min-device-width: 1450px) {
+    .width{
+      width: 100%;
+      max-width: 1850px !important;
+      margin: auto;
+    }
+  }
+  // global text
+p{
+  &.paragraph{
+    opacity: 0.8;
+    box-sizing: border-box;
+    color: #183B56;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    height: auto;
+    line-height: 27px;
+    margin-bottom: 0;
+    opacity: 0.8;
+  }
+  &.small-paragraph{
+    opacity: 0.8;
+    box-sizing: border-box;
+    color: rgb(214, 223, 230);
+    display: block;
+    font-size: 15px;
+    height: auto;
+    line-height: 27px;
+    margin-bottom: 0;
+  }
+  &.heading{
+    color: #183B56;
+    font-weight: 800;
+    text-shadow: 1px 0 #183B56;
+    letter-spacing:1px; 
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+}
+// global buttons
+button{
+  outline: none !important;
+  text-align: center !important;
+  font-size: 15px !important;
+  border-radius: 4px !important;
+  height: 51px !important;
+  width: 145px !important;
+  transition: .2s !important;
+  &.primary{
+    border: 2px solid #64FFDA !important;
+    color: #64FFDA;
+    background: transparent;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    &:hover{
+        background: #376d9691;
+    }
+  }
+  &.secondary{
+    background: transparent;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #14a5df;
+    margin-right: 0;
+    color: #183B56;
+    box-shadow: 4px 4px 8px #14a6df38;
+    &:hover{
+      transform: scale(1.2);
+      background: #139ed4;
+      color: #F9F6EE;
+  }
+  }
+}
+
+
+
+
+
+@media only screen and (min-device-width: 1150px)  {
+  html, body {
+    background: radial-gradient(#2e6d9e, #215074, #183B56) !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    scroll-behavior: smooth !important;
+    margin: 0 auto !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    width: 100% !important;
+  }
+}
+  
+
+  .load-wrapp {
+    float: left;
+    width: 100%;
+    height: 100vh;
+    padding: 20px ;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #215074;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100000000000000000000000 !important;
+    opacity: 1;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in;
+    .text{
+      margin-block: 40px;
+      text-align: center;
+      p{
+        font-size: 15px;
+        color: #F9F6EE;
+        opacity: 0.6;
+        &#joke{
+          opacity: 0;
+          transition: .1s;
+          font-size: 16px;
+          color: #F9F6EE;
+          transform: translateY(25px);
+          &.active{
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+    &.hidden{
+      opacity: 0;
+      top: -100%;
+    }
+    .load-wrapp p {
+      padding: 0 0 20px;
+    }
+    .load-wrapp:last-child {
+      margin-right: 0;
+    }
+    
+    .line {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      background-color: white;
+    }
+
+  .load-2 .line:nth-last-child(1) {
+    animation: loadingB 1.5s 1s infinite;
+  }
+  .load-2 .line:nth-last-child(2) {
+    animation: loadingB 1.5s 0.5s infinite;
+  }
+  .load-2 .line:nth-last-child(3) {
+    animation: loadingB 1.5s 0s infinite;
+  }
+  
+  @keyframes loadingB {
+    0%{
+      width: 15px;
+    }
+    50% {
+      width: 35px;
+    }
+    100% {
+      width: 15px;
+    }
+  }
+  
+  }
