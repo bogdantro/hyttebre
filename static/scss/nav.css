@@ -36,11 +36,14 @@
   padding: 8px;
   margin: -8px;
 }
+#mobileNav .hamburger.active .top-span {
+  transform: rotate(45deg);
+}
 #mobileNav .hamburger.active .center-span {
-  height: 0;
-  width: 0;
-  transform: translateX(-10px);
-  opacity: 0;
+  display: none;
+}
+#mobileNav .hamburger.active .bottom-span {
+  transform: rotate(-45deg);
 }
 #mobileNav .hamburger span {
   transition: 0.4s;
@@ -51,6 +54,7 @@
   position: relative;
   border-radius: 20px;
   margin: 8px auto;
+  transform-origin: 23%;
 }
 #mobileNav .hamburger span.center-span {
   width: 16px;

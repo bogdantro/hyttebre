@@ -38,14 +38,13 @@
         margin: -8px;
         &.active{
             .top-span{
+                transform: rotate(45deg);
             }
             .center-span{
-                height: 0;
-                width: 0;
-                transform: translateX(-10px);
-                opacity: 0;
+                display: none;
             }
             .bottom-span{
+                transform: rotate(-45deg);
             }
         }
         span{
@@ -57,6 +56,7 @@
             position: relative;
             border-radius: 20px;
             margin: 8px auto;
+            transform-origin: 23%;
             &.center-span{
                 width: 16px;
             }
