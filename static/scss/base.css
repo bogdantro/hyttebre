@@ -14,16 +14,8 @@
 .cover .content .text h1 {
   color: #003A65;
   font-size: 36px;
-  font-weight: 900;
+  font-weight: 600;
   margin-bottom: 10px;
-}
-.cover .content .text h1 span {
-  background: #003A65;
-  width: 12px;
-  height: 12px;
-  display: inline-block;
-  transform: translateX(8px) translateY(2px);
-  border-radius: 100%;
 }
 .cover .content .text p {
   font-size: 17px;

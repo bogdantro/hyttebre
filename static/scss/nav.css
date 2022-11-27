@@ -127,7 +127,7 @@
   padding: 6px;
   padding-left: 0;
   margin-block: 15px;
-  font-size: 17px;
+  font-size: 19px;
   width: 100%;
   text-decoration: none;
   transition: 0.4s;
@@ -151,7 +151,7 @@
 }
 #mobileNav .sidebar .socials i {
   color: #003A65;
-  font-size: 23px;
+  font-size: 24px;
   padding: 11px;
 }
 #mobileNav .sidebar .socials i:first-child {
