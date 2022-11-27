@@ -93,7 +93,7 @@
         width: 100%;
         height: 100vh;
         z-index: 10000;
-        padding: 32px;
+        padding: 25px 32px;
         right: -10px;
         pointer-events: none !important;
         // When sidebar is active
@@ -141,7 +141,7 @@
                 &.order{
                     background: #003A65;
                     color: #FAF9F6;
-                    padding: 8px 16px !important;
+                    padding: 12px 18px !important;
                     width: max-content;
                     border-radius: 4px;
                     // When button clicked / hover

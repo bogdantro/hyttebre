@@ -13,12 +13,12 @@
 }
 .cover .content .text h1 {
   color: #003A65;
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 400;
   margin-bottom: 10px;
 }
 .cover .content .text p {
-  font-size: 17px;
+  font-size: 18px;
 }
 .cover .content .cover-actions {
   width: auto;
@@ -26,16 +26,16 @@
   margin-top: 30px;
 }
 .cover .content .cover-actions a {
-  margin-block: 30px;
+  margin-block: 32px;
   display: block;
   font-size: 17px;
   text-decoration: none;
   transition: 0.4s;
   background: #003A65;
   color: #FAF9F6 !important;
-  width: 200px;
+  width: 240px;
   border-radius: 4px;
-  padding: 12px 18px;
+  padding: 14px;
   text-align: center;
 }
 .cover .content .cover-actions a:first-child {
