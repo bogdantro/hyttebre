@@ -16,17 +16,39 @@
 
 
 <div id="mobileNav">
+    <!-- Image at the top right corner -->
     <img src="{% static 'images/other/nav-img.png' %}" alt="" class="nav-img" id="navImg">
+    <!-- Logo -->
     <div onclick="window.location.href='/'" id="logo" class="logo">
         <h1>Hytte<span>Bredbånd</span></h1>
     </div>
+    <!-- Hamburger menu -->
     <div class="hamburger" id="hamburger" onclick="menu()">
         <span class="top-span"></span>
         <span class="center-span"></span>
         <span class="bottom-span"></span>
     </div>
+    <!-- Sidebar --  gets triggered when hamburger menu is clicked -->
     <div class="sidebar" id="sidebar">
-        heisann sveisann
+        <!-- Image inside sidebar -- bottom left corner -->
+        <img src="{% static 'images/other/nav-img.png' %}" alt="" class="sidebar-img-bottom">
+        <!-- Image inside sidebar -- top right corner -- replaces the .nav-img -->
+        <img src="{% static 'images/other/nav-img.png' %}" alt="" class="sidebar-img-top" id="sidebarImgTop">
+        <!-- Links -->
+        <div class="links">
+            <a href="/om-oss">Om oss</a>
+            <a href="/kontakt-oss">Kontakt oss</a>
+            <a href="" class="order">Kom i gang<i class="fa-solid fa-caret-right"></i></a>
+        </div>
+        <hr>
+        <!-- Socials -->
+        <div class="socials">
+            <!-- Icons -->
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-solid fa-phone"></i>
+        </div>
     </div>
 </div>
 

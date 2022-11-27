@@ -1,4 +1,4 @@
-// Mobil navigation
+// Mobile navbar
 #mobileNav{
     display: flex;
     justify-content: space-between;
@@ -11,14 +11,22 @@
     z-index: 10000;
     transition: .2s;
     background: transparent;
-    // Nav img - bildet på høyre hjørne
+    transition: .4s;
+    // When you scroll down
+    &.sticky{
+        background: #e7fdfff6;
+        .nav-img{
+            opacity: 0;
+        }
+    }
+    // Nav img - image top right corner
     .nav-img{
         position: absolute;
         right: 0;
-        top: -10px;
+        top: -45px;
         pointer-events: none !important;
         opacity: 1;
-        transition: .2s;
+        transition: .4s;
         &.active{
             opacity: 0;
         }
@@ -27,10 +35,10 @@
     .logo{
         width: max-content;
         h1{
-            font-size: 22px;
+            font-size: 23px;
             color: #003A65;
             span{
-                font-size: 15px;
+                font-size: 16px;
                 border-bottom: 1px solid #00396570;
                 padding-bottom: 2px;
                 margin-left: 4px;
@@ -41,6 +49,8 @@
     .hamburger{
         padding: 8px;
         margin: -8px;
+        position: relative;
+        z-index: 10000000;
         &.active{
             .top-span{
                 transform: rotate(45deg);
@@ -77,18 +87,86 @@
     .sidebar{
         opacity: 0;
         position: absolute;
-        right: -100%;
         top: 70px;
-        background: #c5f2f7;
+        background: #d5fbff;
         transition: .5s;
         width: 100%;
         height: 100vh;
-        z-index: 10000000000000;
-        padding: 10px 30px;
+        z-index: 10000;
+        padding: 32px;
+        right: -10px;
+        pointer-events: none !important;
+        // When sidebar is active
         &.active{
             right: 0;
             opacity: 1;
             background: #E7FDFF;
+            pointer-events: visible !important;
+        }
+        // Image at bottom left corner -- sidebar
+        .sidebar-img-bottom{
+            position: absolute;
+            left: 2px;
+            bottom: 10px;
+            transform: rotate(180deg);
+            pointer-events: none !important;
+            opacity: 1;
+            transition: .2s;
+        }
+        // Image at bottom left corner -- sidebar
+        .sidebar-img-top{
+            position: absolute;
+            right: 0;
+            top: -115px;
+            pointer-events: none !important;
+            opacity: 1;
+            transition: .2s;
+        }
+        // Links
+        .links{
+            width: 100%;
+            height: max-content;
+            // Links inside sidebar
+            a{
+                display: inline-block;
+                color: #003A65;
+                padding: 6px;
+                padding-left: 0;
+                margin-block: 15px;
+                font-size: 17px;
+                width: 100%;
+                text-decoration: none;
+                transition: .4s;
+                // CTA button
+                &.order{
+                    background: #003A65;
+                    color: #FAF9F6;
+                    padding: 8px 16px !important;
+                    width: max-content;
+                    border-radius: 4px;
+                    // When button clicked / hover
+                    &:active, &:hover{
+                        transform: scale(1.1);
+                        background: #054372;
+                    }
+                    // Icon inside CTA button
+                    i{
+                        padding-left: 10px;
+                        transform: translateY(3px);
+                    }
+                }
+            }
+        }
+        // Sidebar socials
+        .socials{
+            i{
+                color: #003A65;
+                font-size: 23px;
+                padding: 11px;
+                &:first-child{
+                    padding-left: 0;
+                }
+            }
         }
     }
 }

@@ -1,0 +1,52 @@
+.cover {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to bottom right, #E7FDFF, #E7FDFF, #f9ffff);
+  padding-top: 70px;
+}
+.cover .content {
+  padding: 40px 30px 0 30px;
+}
+.cover .content .text {
+  text-align: left;
+}
+.cover .content .text h1 {
+  color: #003A65;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.cover .content .text h1 span {
+  background: #003A65;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  transform: translateX(8px) translateY(2px);
+  border-radius: 100%;
+}
+.cover .content .text p {
+  font-size: 17px;
+}
+.cover .content .cover-actions {
+  width: auto;
+  height: auto;
+  margin-top: 10px;
+}
+.cover .content .cover-actions a {
+  margin-block: 20px;
+  display: block;
+  font-size: 17px;
+  text-decoration: none;
+  transition: 0.4s;
+  background: #003A65;
+  color: #FAF9F6 !important;
+  width: 200px;
+  border-radius: 4px;
+  padding: 12px 18px;
+  text-align: center;
+}
+.cover .content .cover-actions a:active, .cover .content .cover-actions a:hover {
+  transform: scale(1.1);
+  background: #054372;
+}/*# sourceMappingURL=base.css.map */
