@@ -149,11 +149,27 @@
   padding-left: 10px;
   transform: translateY(3px);
 }
+#mobileNav .sidebar .socials .headingp {
+  font-size: 16px;
+  color: #003A65;
+  opacity: 0.7;
+  margin-block: 10px 8px;
+}
 #mobileNav .sidebar .socials i {
   color: #003A65;
-  font-size: 24px;
+  font-size: 22px;
   padding: 11px;
 }
-#mobileNav .sidebar .socials i:first-child {
+#mobileNav .sidebar .socials i.first {
   padding-left: 0;
+}
+#mobileNav .sidebar .call-us .headingp {
+  font-size: 16px;
+  color: #003A65;
+  opacity: 0.7;
+  margin-block: 10px 8px;
+}
+#mobileNav .sidebar .call-us a {
+  color: #003A65;
+  opacity: 0.5;
 }/*# sourceMappingURL=nav.css.map */

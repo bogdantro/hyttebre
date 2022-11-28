@@ -3,7 +3,6 @@
     height: 100vh;
     width: 100%;
     position: relative;
-    background: linear-gradient(to bottom right, #E7FDFF, #E7FDFF, #f9ffff,);
     padding-top: 70px;
     // Content
     .content{
@@ -32,22 +31,30 @@
                 font-size: 17px;
                 text-decoration: none;
                 transition: .4s;
-                background: #003A65;
-                color: #FAF9F6 !important;
                 width: 240px;
                 border-radius: 4px;
                 padding: 14px;
                 text-align: center;
-                // First button
-                &:first-child{
+                &.primary{
+                    background: #003A65;
+                    color: #FAF9F6 !important;
                     margin-top: 0;
+                    // When button clicked / hover
+                    &:active, &:hover{
+                        transform: scale(1.1);
+                        background: #054372;
+                    }
                 }
-                // When button clicked / hover
-                &:active, &:hover{
-                    transform: scale(1.1);
-                    background: #054372;
+                &.secondary{
+                    background: transparent;
+                    color: #003A65 !important;
+                    border: 2px solid #003A65;
+                    // When button clicked / hover
+                    &:active, &:hover{
+                        transform: scale(1.1);
+                        background: #0543720f;
+                    }
                 }
-                
             }
         }
     }

@@ -2,7 +2,6 @@
   height: 100vh;
   width: 100%;
   position: relative;
-  background: linear-gradient(to bottom right, #E7FDFF, #E7FDFF, #f9ffff);
   padding-top: 70px;
 }
 .cover .content {
@@ -31,17 +30,26 @@
   font-size: 17px;
   text-decoration: none;
   transition: 0.4s;
-  background: #003A65;
-  color: #FAF9F6 !important;
   width: 240px;
   border-radius: 4px;
   padding: 14px;
   text-align: center;
 }
-.cover .content .cover-actions a:first-child {
+.cover .content .cover-actions a.primary {
+  background: #003A65;
+  color: #FAF9F6 !important;
   margin-top: 0;
 }
-.cover .content .cover-actions a:active, .cover .content .cover-actions a:hover {
+.cover .content .cover-actions a.primary:active, .cover .content .cover-actions a.primary:hover {
   transform: scale(1.1);
   background: #054372;
+}
+.cover .content .cover-actions a.secondary {
+  background: transparent;
+  color: #003A65 !important;
+  border: 2px solid #003A65;
+}
+.cover .content .cover-actions a.secondary:active, .cover .content .cover-actions a.secondary:hover {
+  transform: scale(1.1);
+  background: rgba(5, 67, 114, 0.0588235294);
 }/*# sourceMappingURL=base.css.map */

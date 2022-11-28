@@ -159,13 +159,32 @@
         }
         // Sidebar socials
         .socials{
+            .headingp{
+                font-size: 16px;
+                color: #003A65;
+                opacity: 0.7;
+                margin-block: 10px 8px;
+            }
             i{
                 color: #003A65;
-                font-size: 24px;
+                font-size: 22px;
                 padding: 11px;
-                &:first-child{
+                &.first{
                     padding-left: 0;
                 }
+            }
+        }
+        // Call us
+        .call-us{
+            .headingp{
+                font-size: 16px;
+                color: #003A65;
+                opacity: 0.7;
+                margin-block: 10px 8px;
+            }
+            a{
+                color: #003A65;
+                opacity: 0.5;
             }
         }
     }
