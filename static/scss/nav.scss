@@ -1,3 +1,7 @@
+// Hide the desktop nav on mobile
+#desNav{
+    display: none;
+}
 // Mobile navbar
 #mobileNav{
     display: flex;
@@ -9,15 +13,18 @@
     position: fixed;
     top: 0;
     z-index: 10000;
-    transition: .2s;
+    transition: 0;
     background: transparent;
-    transition: .4s;
     // When you scroll down
     &.sticky{
         background: #e7fdfff6;
         .nav-img{
             opacity: 0;
         }
+    }
+    // When sidebar is active -- navbar changes background
+    &.menu{
+        background: #E7FDFF;
     }
     // Nav img - image top right corner
     .nav-img{
@@ -87,7 +94,7 @@
     .sidebar{
         opacity: 0;
         position: absolute;
-        top: 70px;
+        top: 65px;
         background: #d5fbff;
         transition: .5s;
         width: 100%;
@@ -117,7 +124,7 @@
         .sidebar-img-top{
             position: absolute;
             right: 0;
-            top: -115px;
+            top: -110px;
             pointer-events: none !important;
             opacity: 1;
             transition: .2s;
@@ -149,11 +156,6 @@
                         transform: scale(1.1);
                         background: #054372;
                     }
-                    // Icon inside CTA button
-                    i{
-                        padding-left: 10px;
-                        transform: translateY(3px);
-                    }
                 }
             }
         }
@@ -162,12 +164,12 @@
             .headingp{
                 font-size: 16px;
                 color: #003A65;
-                opacity: 0.7;
+                opacity: 0.8;
                 margin-block: 10px 8px;
             }
             i{
                 color: #003A65;
-                font-size: 22px;
+                font-size: 21px;
                 padding: 11px;
                 &.first{
                     padding-left: 0;
@@ -179,12 +181,88 @@
             .headingp{
                 font-size: 16px;
                 color: #003A65;
-                opacity: 0.7;
+                opacity: 0.8;
                 margin-block: 10px 8px;
             }
             a{
                 color: #003A65;
                 opacity: 0.5;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// #1 breakpoint
+@media only screen and (min-device-width: 1150px)  {
+    // Hide mobile nav on desktop
+    #mobileNav{
+        display: none;
+    }
+    // Desktop navbar
+    #desNav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 75px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 10000;
+        transition: 0;
+        background: #e7fdfff3;
+        padding: 20px 40px;
+        // Logo
+        .logo{
+            width: max-content;
+            cursor: pointer;
+            h1{
+                font-size: 24px;
+                color: #003A65;
+                transition: .3s;
+                span{
+                    font-size: 17px;
+                    border-bottom: 1px solid #00396570;
+                    padding-bottom: 2px;
+                    margin-left: 4px;
+                }
+                // When logo hovers
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+        // Menu
+        .menu{
+            // Links
+            a{
+                padding-inline: 10px;
+                margin-inline: 5px;
+                color: #003A65;
+                font-size: 17px;
+                opacity: 0.8;
+                cursor: pointer;
+                transition: .4s;
+                padding-bottom: 5px;
+                text-decoration: none;
+                border-bottom: 2px solid transparent;
+                // CTA button
+                &.order{
+                    background: #003A65;
+                    padding: 10px 20px;
+                    color: #FAF9F6;
+                    border-radius: 4px;
+                    transition: .2s;
+                    // When button clicked / hover
+                    &:active, &:hover{
+                        transform: scale(1.1);
+                        background: #075189;
+                    }
+                }
+                // When links get hovered
+                &:hover{
+                    border-bottom: 2px solid #003A65;
+                }
             }
         }
     }
