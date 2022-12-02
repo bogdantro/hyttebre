@@ -62,6 +62,14 @@ p{
     font-size: 22px;
     margin-bottom: 0;
   }
+  &.headingp{
+    font-size: 13px;
+    margin-bottom: 0;
+    color: #003A65;
+    font-weight: 800;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
 }
 // global buttons
 button{

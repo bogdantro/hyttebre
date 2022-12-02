@@ -1,0 +1,29 @@
+#footer {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid rgba(0, 57, 101, 0.4509803922);
+}
+#footer .footerbottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+#footer .footerbottom .copyright {
+  margin-bottom: 0 !important;
+}
+#footer .footerbottom .copyright p {
+  color: #003A65;
+  opacity: 0.8;
+  font-size: 13px;
+  margin-bottom: 0 !important;
+}
+#footer .footerbottom .social-icons i {
+  color: #003A65;
+  opacity: 0.8;
+  padding: 10px;
+}
+#footer .footerbottom .social-icons i:last-child {
+  padding-right: 0 !important;
+}/*# sourceMappingURL=footer.css.map */

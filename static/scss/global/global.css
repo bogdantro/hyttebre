@@ -58,6 +58,14 @@ p.heading {
   font-size: 22px;
   margin-bottom: 0;
 }
+p.headingp {
+  font-size: 13px;
+  margin-bottom: 0;
+  color: #003A65;
+  font-weight: 800;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
 
 button {
   outline: none !important;

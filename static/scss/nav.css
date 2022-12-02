@@ -133,7 +133,7 @@
   padding: 6px;
   padding-left: 0;
   margin-block: 15px;
-  font-size: 19px;
+  font-size: 17px;
   width: 100%;
   text-decoration: none;
   transition: 0.4s;
@@ -141,7 +141,7 @@
 #mobileNav .sidebar .links a.order {
   background: #003A65;
   color: #FAF9F6;
-  padding: 12px 18px !important;
+  padding: 8px 18px !important;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -159,7 +159,7 @@
 }
 #mobileNav .sidebar .socials i {
   color: #003A65;
-  font-size: 21px;
+  font-size: 23px;
   padding: 11px;
 }
 #mobileNav .sidebar .socials i.first {
@@ -191,23 +191,47 @@
     top: 0;
     z-index: 10000;
     transition: 0;
-    background: rgba(231, 253, 255, 0.9529411765);
+    background: transparent;
     padding: 20px 40px;
+    background: rgba(250, 250, 250, 0.05);
+  }
+  #desNav::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    background: rgba(231, 253, 255, 0.9450980392);
+    left: 0;
+    top: -20px;
+    opacity: 0;
+    transition: 0.4s;
+  }
+  #desNav.sticky::before {
+    top: 0;
+    opacity: 1;
+  }
+  #desNav.sticky .menu a {
+    color: #003A65;
+  }
+  #desNav.sticky .logo h1 {
+    color: #003A65 !important;
   }
   #desNav .logo {
+    z-index: 1000;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     cursor: pointer;
   }
   #desNav .logo h1 {
-    font-size: 24px;
-    color: #003A65;
+    font-size: 23px;
+    color: #FAF9F6;
     transition: 0.3s;
   }
   #desNav .logo h1 span {
-    font-size: 17px;
-    border-bottom: 1px solid rgba(0, 57, 101, 0.4392156863);
+    font-size: 16px;
+    border-bottom: 1px solid rgba(190, 190, 190, 0.4392156863);
     padding-bottom: 2px;
     margin-left: 4px;
   }
@@ -217,9 +241,9 @@
   #desNav .menu a {
     padding-inline: 10px;
     margin-inline: 5px;
-    color: #003A65;
+    color: #FAF9F6;
     font-size: 17px;
-    opacity: 0.8;
+    opacity: 0.9;
     cursor: pointer;
     transition: 0.4s;
     padding-bottom: 5px;

@@ -1,9 +1,14 @@
+// Hide des cover on mobile
+.des-cover{
+    display: none;
+}
 // Cover
-.cover{
+.mob-cover{
     height: auto;
     width: 100%;
     position: relative;
     padding-top: 70px;
+    display: block;
     // Content
     .content{
         padding: 30px 30px 0 30px;
@@ -32,18 +37,18 @@
                 font-size: 17px;
                 text-decoration: none;
                 transition: .4s;
-                width: 240px;
+                width: 220px;
                 border-radius: 4px;
-                padding: 14px;
+                padding: 10px;
                 text-align: center;
                 &.primary{
-                    background: linear-gradient(to right, #003A65, #EAD9E2);
+                    background: #003A65;
                     color: #FAF9F6 !important;
                     margin-top: 0;
                     // When button clicked / hover
                     &:active, &:hover{
                         transform: scale(1.1);
-                        background: #054372;
+                        background: #02477c;
                     }
                 }
                 &.secondary{
@@ -67,42 +72,134 @@
     }
 }
 
+// Process
+.process{
+    margin-top: 75px;
+    width: 100%;
+    height: auto;
+    // Content
+    .content{
+        padding-inline: 30px;
+        // Text
+        .text{
+            h1{
+                color: #003A65;
+                font-size: 34px;
+                font-weight: 400;
+                margin-top: 6px;
+                // Måtte skrive det her pgav den var ikke lina bra
+                transform: translateX(-2px);
+                // //
+            }
+        }
+        // Cards
+        .cards{
+            width: 100%;
+            height: auto;
+            margin-top: 38px;
+            // Card
+            .card{
+                border: none;
+                background: transparent;
+                margin-bottom: 58px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                    filter: brightness(90%);
+                    border-radius: 4px;
+                }
+                .card-text{
+                    margin-top: 10px;
+                    padding-left: 1px;
+                    h1{
+                        font-size: 22px;
+                        color: #003A65;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // #1 breakpoint
 @media only screen and (min-device-width: 1150px)  {
+    // Hide mob cover on desktop
+    .mob-cover{
+        display: none;
+    }
     // Cover
-    .cover{
+    .des-cover{
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        height: 640px;
         // Content
         .content{
-            padding: 80px 40px;
+            // Image
+            .cover-img{
+                width: 100%;
+                filter: brightness(75%);
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            padding: 170px 40px;
             // Text
             .text{
+                position: relative;
+                text-align: center;
                 h1{
-                    font-size: 40px;
+                    color: #FAF9F6;
+                    font-size: 42px;
                 }
-                .paragraph{
-                    width: 450px;
+                p{
+                    color: #FAF9F6;
+                    font-size: 18px;
                 }
             }
-            // Cover img
-            .cover-img{
-                position: absolute;
-                right: 40px;
-                top: 160px;
-                max-width: 440px;
-            }
-            // Cover actions
+            // Cover CTAS
             .cover-actions{
-                margin-top: 25px;
+                width: auto;
+                height: auto;
+                margin-top: 35px;
+                position: relative;
+                display: flex;
+                justify-content: center;
                 a{
-                    display: inline-block;
-                    margin-block: 0;
+                    margin-inline: 32px;
+                    display: block;
+                    font-size: 17px;
+                    text-decoration: none;
+                    transition: .4s;
+                    width: 220px;
+                    border-radius: 4px;
+                    padding: 10px;
+                    text-align: center;
                     cursor: pointer;
-                    margin-inline: 10px;
-                    // Main button
                     &.primary{
-                        margin-left: 0;
-                        &:hover{
-                            background: linear-gradient(to right, #02477c, #f3e4ec);
+                        background: #003A65;
+                        color: #FAF9F6 !important;
+                        margin-top: 0;
+                        // When button clicked / hover
+                        &:active, &:hover{
+                            transform: scale(1.1);
+                            background: #02477c;
+                        }
+                    }
+                    &.secondary{
+                        background: transparent;
+                        color: #FAF9F6!important;
+                        border: 2px solid #FAF9F6;
+                        // When button clicked / hover
+                        &:active, &:hover{
+                            transform: scale(1.1);
+                            background: #ffffff18;
                         }
                     }
                 }

@@ -1,94 +1,184 @@
-.cover {
+.des-cover {
+  display: none;
+}
+
+.mob-cover {
   height: auto;
   width: 100%;
   position: relative;
   padding-top: 70px;
+  display: block;
 }
-.cover .content {
+.mob-cover .content {
   padding: 30px 30px 0 30px;
   width: 100%;
 }
-.cover .content .text {
+.mob-cover .content .text {
   text-align: left;
 }
-.cover .content .text h1 {
+.mob-cover .content .text h1 {
   color: #003A65;
   font-size: 38px;
   font-weight: 400;
   margin-bottom: 10px;
 }
-.cover .content .text p {
+.mob-cover .content .text p {
   font-size: 18px;
 }
-.cover .content .cover-actions {
+.mob-cover .content .cover-actions {
   width: auto;
   height: auto;
   margin-top: 30px;
 }
-.cover .content .cover-actions a {
+.mob-cover .content .cover-actions a {
   margin-block: 32px;
   display: block;
   font-size: 17px;
   text-decoration: none;
   transition: 0.4s;
-  width: 240px;
+  width: 220px;
   border-radius: 4px;
-  padding: 14px;
+  padding: 10px;
   text-align: center;
 }
-.cover .content .cover-actions a.primary {
-  background: linear-gradient(to right, #003A65, #EAD9E2);
+.mob-cover .content .cover-actions a.primary {
+  background: #003A65;
   color: #FAF9F6 !important;
   margin-top: 0;
 }
-.cover .content .cover-actions a.primary:active, .cover .content .cover-actions a.primary:hover {
+.mob-cover .content .cover-actions a.primary:active, .mob-cover .content .cover-actions a.primary:hover {
   transform: scale(1.1);
-  background: #054372;
+  background: #02477c;
 }
-.cover .content .cover-actions a.secondary {
+.mob-cover .content .cover-actions a.secondary {
   background: transparent;
   color: #003A65 !important;
   border: 2px solid #003A65;
 }
-.cover .content .cover-actions a.secondary:active, .cover .content .cover-actions a.secondary:hover {
+.mob-cover .content .cover-actions a.secondary:active, .mob-cover .content .cover-actions a.secondary:hover {
   transform: scale(1.1);
   background: rgba(5, 67, 114, 0.0588235294);
 }
-.cover .content .cover-img {
+.mob-cover .content .cover-img {
   width: 85%;
   height: auto;
   border-radius: 12px;
 }
 
+.process {
+  margin-top: 75px;
+  width: 100%;
+  height: auto;
+}
+.process .content {
+  padding-inline: 30px;
+}
+.process .content .text h1 {
+  color: #003A65;
+  font-size: 34px;
+  font-weight: 400;
+  margin-top: 6px;
+  transform: translateX(-2px);
+}
+.process .content .cards {
+  width: 100%;
+  height: auto;
+  margin-top: 38px;
+}
+.process .content .cards .card {
+  border: none;
+  background: transparent;
+  margin-bottom: 58px;
+}
+.process .content .cards .card:last-child {
+  margin-bottom: 0;
+}
+.process .content .cards .card img {
+  width: 100%;
+  height: auto;
+  filter: brightness(90%);
+  border-radius: 4px;
+}
+.process .content .cards .card .card-text {
+  margin-top: 10px;
+  padding-left: 1px;
+}
+.process .content .cards .card .card-text h1 {
+  font-size: 22px;
+  color: #003A65;
+  font-weight: 700;
+}
+
 @media only screen and (min-device-width: 1150px) {
-  .cover .content {
-    padding: 80px 40px;
+  .mob-cover {
+    display: none;
   }
-  .cover .content .text h1 {
-    font-size: 40px;
+  .des-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    height: 640px;
   }
-  .cover .content .text .paragraph {
-    width: 450px;
+  .des-cover .content {
+    padding: 170px 40px;
   }
-  .cover .content .cover-img {
+  .des-cover .content .cover-img {
+    width: 100%;
+    filter: brightness(75%);
     position: absolute;
-    right: 40px;
-    top: 160px;
-    max-width: 440px;
+    left: 0;
+    top: 0;
   }
-  .cover .content .cover-actions {
-    margin-top: 25px;
+  .des-cover .content .text {
+    position: relative;
+    text-align: center;
   }
-  .cover .content .cover-actions a {
-    display: inline-block;
-    margin-block: 0;
+  .des-cover .content .text h1 {
+    color: #FAF9F6;
+    font-size: 42px;
+  }
+  .des-cover .content .text p {
+    color: #FAF9F6;
+    font-size: 18px;
+  }
+  .des-cover .content .cover-actions {
+    width: auto;
+    height: auto;
+    margin-top: 35px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .des-cover .content .cover-actions a {
+    margin-inline: 32px;
+    display: block;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.4s;
+    width: 220px;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
     cursor: pointer;
-    margin-inline: 10px;
   }
-  .cover .content .cover-actions a.primary {
-    margin-left: 0;
+  .des-cover .content .cover-actions a.primary {
+    background: #003A65;
+    color: #FAF9F6 !important;
+    margin-top: 0;
   }
-  .cover .content .cover-actions a.primary:hover {
-    background: linear-gradient(to right, #02477c, #f3e4ec);
+  .des-cover .content .cover-actions a.primary:active, .des-cover .content .cover-actions a.primary:hover {
+    transform: scale(1.1);
+    background: #02477c;
+  }
+  .des-cover .content .cover-actions a.secondary {
+    background: transparent;
+    color: #FAF9F6 !important;
+    border: 2px solid #FAF9F6;
+  }
+  .des-cover .content .cover-actions a.secondary:active, .des-cover .content .cover-actions a.secondary:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.0941176471);
   }
 }/*# sourceMappingURL=base.css.map */

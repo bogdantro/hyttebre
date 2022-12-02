@@ -3,6 +3,11 @@ window.addEventListener("scroll", function(){
     navbar.classList.toggle("sticky", window.scrollY > 1)
 })
 
+window.addEventListener("scroll", function(){
+    const navbar = document.getElementById('desNav');
+    navbar.classList.toggle("sticky", window.scrollY > 1)
+})
+
 function menu(){
     const sidebar = document.getElementById('sidebar');
     const hamburger = document.getElementById('hamburger');

@@ -5,14 +5,14 @@
 <link rel="stylesheet" href="{% static '/scss/base.css' %}" type="text/css">
 <link rel="stylesheet" href="{% static '/scss/global/global.css' %}" type="text/css">
 
-<!-- Cover -->
-<div class="cover">
+<!-- Mob cover -->
+<div class="mob-cover">
   <!-- Content -->
   <div class="content">
     <!-- Text -->
     <div class="text">
-      <h1>Beste måten å få nett på hytta</h1>
-      <p class="paragraph">Sammen med våres samarbeidere, garanterer vi nett på hytta som du aldri har sett før</p>
+      <h1>Internett til hytta</h1>
+      <p class="paragraph">Med Trådløstbredbånd får du et godt og stabilt nett med ubegrenset databruk</p>
     </div>
     <!-- Cover CTAS -->
     <div class="cover-actions">
@@ -20,17 +20,74 @@
       <a class="secondary">Kom i gang</a>
     </div>
     <!-- Cover image -->
-    <img src="{% static 'images/covers/cover.jpg' %}" alt="" class="cover-img">
+    <img src="{% static 'images/covers/mob-cover.jpg' %}" alt="" class="cover-img">
   </div>
 </div>
 
-<br>
-<br>
-<br>
-<br>
+<!-- Des cover -->
+<div class="des-cover">
+  <!-- Content -->
+  <div class="content">
+    <!-- Cover image -->
+    <img src="{% static 'images/covers/des-cover.jpg' %}" alt="" class="cover-img">
+    <!-- Text -->
+    <div class="text">
+      <h1>Internett til hytta</h1>
+      <p class="paragraph">Med Trådløstbredbånd får du et godt og stabilt nett med ubegrenset databruk</p>
+    </div>
+    <!-- Cover CTAS -->
+    <div class="cover-actions">
+      <a class="primary">Om oss</a>
+      <a class="secondary">Kom i gang</a>
+    </div>
+  </div>
+</div>
 
-<br>
-<br>
+<!-- Process -->
+<div class="process">
+  <!-- Content -->
+  <div class="content">
+    <!-- Text -->
+    <div class="text">
+      <p class="headingp">Prossesen</p>
+      <h1>Slik fungerer det</h1>
+    </div>
+    <!-- Cards -->
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <!-- Image -->
+        <img src="{% static 'images/other/process1.jpg' %}" alt="">
+        <!-- Card text -->
+        <div class="card-text">
+          <h1>Snakk med oss</h1>
+          <p class="paragraph">Chatt med oss når som helst! Fyll inn skjema på siden, så vil en av våre bredbånds eksperter ta konkakt med det</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <!-- Image -->
+        <img src="{% static 'images/other/process2.jpg' %}" alt="">
+        <!-- Card text -->
+        <div class="card-text">
+          <h1>Vi finner det beste tilbudet</h1>
+          <p class="paragraph">Nå er det vår jobb å finne det beste tilbudet for deg! Hvis tilbudet er fristende, så er det bare å besvare SMS med OK. Så fikser vi resten for deg</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <!-- Image -->
+        <img src="{% static 'images/other/process3.jpg' %}" alt="">
+        <!-- Card text -->
+        <div class="card-text">
+          <h1>Alt er klart!</h1>
+          <p class="paragraph">Montør ringer deg for å avtale tidspunkt for montering. Så enkelt er det!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <br>
 <br>
 {% endblock %}

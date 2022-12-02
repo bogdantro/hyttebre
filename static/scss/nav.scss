@@ -140,7 +140,7 @@
                 padding: 6px;
                 padding-left: 0;
                 margin-block: 15px;
-                font-size: 19px;
+                font-size: 17px;
                 width: 100%;
                 text-decoration: none;
                 transition: .4s;
@@ -148,7 +148,7 @@
                 &.order{
                     background: #003A65;
                     color: #FAF9F6;
-                    padding: 12px 18px !important;
+                    padding: 8px 18px !important;
                     width: max-content;
                     border-radius: 4px;
                     // When button clicked / hover
@@ -169,7 +169,7 @@
             }
             i{
                 color: #003A65;
-                font-size: 21px;
+                font-size: 23px;
                 padding: 11px;
                 &.first{
                     padding-left: 0;
@@ -210,19 +210,49 @@
         top: 0;
         z-index: 10000;
         transition: 0;
-        background: #e7fdfff3;
+        background: transparent;
         padding: 20px 40px;
+        background: rgba(250,250,250,0.05);
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 75px;
+            background: #e7fdfff1;
+            left: 0;
+            top: -20px;
+            opacity: 0;
+            transition: .4s;
+        }
+        &.sticky{
+            &::before{
+                top: 0;
+                opacity: 1;
+            }
+            .menu{
+                a{
+                    color: #003A65;
+                }
+            }
+            .logo{
+                h1{
+                    color: #003A65 !important;
+                }
+            }
+        }
         // Logo
         .logo{
+            z-index: 1000;
             width: max-content;
             cursor: pointer;
             h1{
-                font-size: 24px;
-                color: #003A65;
+                font-size: 23px;
+                color: #FAF9F6;
                 transition: .3s;
                 span{
-                    font-size: 17px;
-                    border-bottom: 1px solid #00396570;
+                    font-size: 16px;
+                    border-bottom: 1px solid #bebebe70;
                     padding-bottom: 2px;
                     margin-left: 4px;
                 }
@@ -238,9 +268,9 @@
             a{
                 padding-inline: 10px;
                 margin-inline: 5px;
-                color: #003A65;
+                color: #FAF9F6;
                 font-size: 17px;
-                opacity: 0.8;
+                opacity: 0.9;
                 cursor: pointer;
                 transition: .4s;
                 padding-bottom: 5px;
