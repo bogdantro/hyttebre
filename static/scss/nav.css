@@ -12,41 +12,49 @@
   position: fixed;
   top: 0;
   z-index: 10000;
-  transition: 0;
+  transition: 0.5s !important;
   background: transparent;
 }
 #mobileNav.sticky {
   background: rgba(231, 253, 255, 0.9647058824);
+  transition: 0.2s !important;
+  box-shadow: 0 1px 4px rgba(80, 80, 80, 0.1);
 }
-#mobileNav.sticky .nav-img {
-  opacity: 0;
+#mobileNav.sticky .logo h1 {
+  color: #003A65;
+}
+#mobileNav.sticky .logo h1 span {
+  border-bottom: 1px solid rgba(0, 57, 101, 0.662745098);
+}
+#mobileNav.sticky .hamburger span {
+  background: #003A65;
 }
 #mobileNav.menu {
   background: #E7FDFF;
+  transition: 0.5s !important;
 }
-#mobileNav .nav-img {
-  position: absolute;
-  right: 0;
-  top: -45px;
-  pointer-events: none !important;
-  opacity: 1;
-  transition: 0.4s;
+#mobileNav.menu .logo h1 {
+  color: #003A65;
 }
-#mobileNav .nav-img.active {
-  opacity: 0;
+#mobileNav.menu .logo h1 span {
+  border-bottom: 1px solid rgba(0, 57, 101, 0.662745098);
+}
+#mobileNav.menu .hamburger span {
+  background: #003A65;
 }
 #mobileNav .logo {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  transition: 0.2s;
 }
 #mobileNav .logo h1 {
   font-size: 23px;
-  color: #003A65;
+  color: #FAF9F6;
 }
 #mobileNav .logo h1 span {
   font-size: 16px;
-  border-bottom: 1px solid rgba(0, 57, 101, 0.4392156863);
+  border-bottom: 1px solid rgba(250, 249, 246, 0.5215686275);
   padding-bottom: 2px;
   margin-left: 4px;
 }
@@ -66,10 +74,10 @@
   transform: rotate(-45deg);
 }
 #mobileNav .hamburger span {
-  transition: 0.4s;
+  transition: 0.5s;
   width: 26px;
   height: 2px;
-  background: #003A65;
+  background: #FAF9F6;
   display: block;
   position: relative;
   border-radius: 20px;
@@ -88,14 +96,14 @@
 #mobileNav .sidebar {
   opacity: 0;
   position: absolute;
-  top: 65px;
+  top: 70px;
   background: #d5fbff;
   transition: 0.5s;
   width: 100%;
   height: 100vh;
   z-index: 10000;
   padding: 25px 32px;
-  right: -10px;
+  right: 0;
   pointer-events: none !important;
 }
 #mobileNav .sidebar.active {

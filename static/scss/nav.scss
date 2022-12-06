@@ -13,40 +13,55 @@
     position: fixed;
     top: 0;
     z-index: 10000;
-    transition: 0;
+    transition: .5s !important;
     background: transparent;
     // When you scroll down
     &.sticky{
         background: #e7fdfff6;
-        .nav-img{
-            opacity: 0;
+        transition: .2s !important;
+        box-shadow: 0 1px 4px rgba(80,80,80,0.1);
+        .logo{
+            h1{
+                color: #003A65;
+                span{
+                    border-bottom: 1px solid #003965a9;
+                }
+            }
+        }
+        .hamburger{
+            span{
+                background: #003A65;
+            }
         }
     }
     // When sidebar is active -- navbar changes background
     &.menu{
         background: #E7FDFF;
-    }
-    // Nav img - image top right corner
-    .nav-img{
-        position: absolute;
-        right: 0;
-        top: -45px;
-        pointer-events: none !important;
-        opacity: 1;
-        transition: .4s;
-        &.active{
-            opacity: 0;
+        transition: .5s !important;
+        .logo{
+            h1{
+                color: #003A65;
+                span{
+                    border-bottom: 1px solid #003965a9;
+                }
+            }
+        }
+        .hamburger{
+            span{
+                background: #003A65;
+            }
         }
     }
     // Logo
     .logo{
         width: max-content;
+        transition: .2s;
         h1{
             font-size: 23px;
-            color: #003A65;
+            color: #FAF9F6;
             span{
                 font-size: 16px;
-                border-bottom: 1px solid #00396570;
+                border-bottom: 1px solid #faf9f685;
                 padding-bottom: 2px;
                 margin-left: 4px;
             }
@@ -70,10 +85,10 @@
             }
         }
         span{
-            transition: .4s;
+            transition: .5s;
             width: 26px;
             height: 2px;
-            background: #003A65;
+            background: #FAF9F6;
             display: block;
             position: relative;
             border-radius: 20px;
@@ -94,14 +109,14 @@
     .sidebar{
         opacity: 0;
         position: absolute;
-        top: 65px;
+        top: 70px;
         background: #d5fbff;
         transition: .5s;
         width: 100%;
         height: 100vh;
         z-index: 10000;
         padding: 25px 32px;
-        right: -10px;
+        right: 0;
         pointer-events: none !important;
         // When sidebar is active
         &.active{

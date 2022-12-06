@@ -73,13 +73,6 @@ p{
 }
 // global buttons
 button{
-  outline: none !important;
-  text-align: center !important;
-  font-size: 15px !important;
-  border-radius: 4px !important;
-  height: 51px !important;
-  width: 145px !important;
-  transition: .2s !important;
   &.primary{
     border: 2px solid #64FFDA !important;
     color: #64FFDA;

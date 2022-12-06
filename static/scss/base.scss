@@ -1,14 +1,20 @@
-// Hide des cover on mobile
-.des-cover{
-    display: none;
-}
 // Cover
-.mob-cover{
-    height: auto;
+.cover{
+    height: 470px;
     width: 100%;
     position: relative;
     padding-top: 70px;
     display: block;
+    // Cover image
+    .cover-img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        filter: brightness(60%);
+        object-fit: cover;
+    }
     // Content
     .content{
         padding: 30px 30px 0 30px;
@@ -17,12 +23,15 @@
         .text{
             text-align: left;
             h1{
-                color: #003A65;
+                position: relative;
+                display: block;
+                color: #FAF9F6;
                 font-size: 38px;
                 font-weight: 400;
                 margin-bottom: 10px;
             }
             p{
+                color: #FAF9F6;
                 font-size: 18px;
             }
         }
@@ -31,43 +40,27 @@
             width: auto;
             height: auto;
             margin-top: 30px;
+            position: relative;
             a{
-                margin-block: 32px;
                 display: block;
                 font-size: 17px;
                 text-decoration: none;
                 transition: .4s;
                 width: 220px;
                 border-radius: 4px;
-                padding: 10px;
+                padding: 13px;
                 text-align: center;
                 &.primary{
-                    background: #003A65;
-                    color: #FAF9F6 !important;
-                    margin-top: 0;
-                    // When button clicked / hover
-                    &:active, &:hover{
-                        transform: scale(1.1);
-                        background: #02477c;
-                    }
-                }
-                &.secondary{
                     background: transparent;
-                    color: #003A65 !important;
-                    border: 2px solid #003A65;
+                    color: #FAF9F6 !important;
+                    border: 1px solid #FAF9F6;
+                    background: rgba(180,180,180,0.2);
                     // When button clicked / hover
                     &:active, &:hover{
                         transform: scale(1.1);
-                        background: #0543720f;
                     }
                 }
             }
-        }
-        // Cover image
-        .cover-img{
-            width: 85%;
-            height: auto;
-            border-radius: 12px;
         }
     }
 }

@@ -1,68 +1,63 @@
-.des-cover {
-  display: none;
-}
-
-.mob-cover {
-  height: auto;
+.cover {
+  height: 470px;
   width: 100%;
   position: relative;
   padding-top: 70px;
   display: block;
 }
-.mob-cover .content {
+.cover .cover-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  filter: brightness(60%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cover .content {
   padding: 30px 30px 0 30px;
   width: 100%;
 }
-.mob-cover .content .text {
+.cover .content .text {
   text-align: left;
 }
-.mob-cover .content .text h1 {
-  color: #003A65;
+.cover .content .text h1 {
+  position: relative;
+  display: block;
+  color: #FAF9F6;
   font-size: 38px;
   font-weight: 400;
   margin-bottom: 10px;
 }
-.mob-cover .content .text p {
+.cover .content .text p {
+  color: #FAF9F6;
   font-size: 18px;
 }
-.mob-cover .content .cover-actions {
+.cover .content .cover-actions {
   width: auto;
   height: auto;
   margin-top: 30px;
+  position: relative;
 }
-.mob-cover .content .cover-actions a {
-  margin-block: 32px;
+.cover .content .cover-actions a {
   display: block;
   font-size: 17px;
   text-decoration: none;
   transition: 0.4s;
   width: 220px;
   border-radius: 4px;
-  padding: 10px;
+  padding: 13px;
   text-align: center;
 }
-.mob-cover .content .cover-actions a.primary {
-  background: #003A65;
-  color: #FAF9F6 !important;
-  margin-top: 0;
-}
-.mob-cover .content .cover-actions a.primary:active, .mob-cover .content .cover-actions a.primary:hover {
-  transform: scale(1.1);
-  background: #02477c;
-}
-.mob-cover .content .cover-actions a.secondary {
+.cover .content .cover-actions a.primary {
   background: transparent;
-  color: #003A65 !important;
-  border: 2px solid #003A65;
+  color: #FAF9F6 !important;
+  border: 1px solid #FAF9F6;
+  background: rgba(180, 180, 180, 0.2);
 }
-.mob-cover .content .cover-actions a.secondary:active, .mob-cover .content .cover-actions a.secondary:hover {
+.cover .content .cover-actions a.primary:active, .cover .content .cover-actions a.primary:hover {
   transform: scale(1.1);
-  background: rgba(5, 67, 114, 0.0588235294);
-}
-.mob-cover .content .cover-img {
-  width: 85%;
-  height: auto;
-  border-radius: 12px;
 }
 
 .process {

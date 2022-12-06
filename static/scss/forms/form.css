@@ -1,258 +1,96 @@
-.page-for-form {
-  padding-bottom: 0;
-  transition: 1s;
-  top: 0;
-  width: 100%;
-}
-.page-for-form .contact-info-text {
-  display: none;
-}
-.page-for-form .bottom-cover {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 25px;
-  pointer-events: visible;
-  opacity: 0.8;
-  z-index: 1000000000;
-}
-.page-for-form .bottom-cover .bottom-cover-text {
-  margin: 0;
-  transition: 0.2s;
-}
-.page-for-form .bottom-cover .bottom-cover-text .bottom-text {
-  margin: 0;
-  font-size: 12px;
-}
-.page-for-form .bottom-cover .bottom-cover-text .bottom-text span {
-  border-bottom: 1px solid rgba(100, 255, 219, 0.5490196078);
-  padding-bottom: 5px;
-}
-.page-for-form .email {
-  display: none;
-}
-.page-for-form .socials {
-  display: none;
-}
 .page-for-form form {
   margin: 0 auto;
   text-align: left;
   width: 100%;
+  max-width: 700px;
   box-shadow: unset;
-  padding-inline: 35px;
+  padding: 20px 30px;
   position: relative;
-  top: 0;
+  height: auto;
+  margin-top: 62px;
+}
+.page-for-form form .headingp {
+  margin-bottom: 7px;
+}
+.page-for-form form .heading {
+  color: #003A65;
+  font-size: 34px;
+  font-weight: 400;
+  margin-top: 6px;
 }
 .page-for-form form .inputs-labels label {
-  color: #F9F6EE;
+  color: rgba(24, 59, 86, 0.671);
   font-size: 15px;
-  opacity: 0.9;
-  margin-bottom: 15px;
-  display: none;
+  font-weight: 800;
 }
 .page-for-form form .inputs-labels input, .page-for-form form .inputs-labels textarea {
-  padding: 5px;
-  padding-left: 8px;
-  border: none;
+  border-radius: 4px;
+  padding: 12px;
   outline: none;
-  color: #F9F6EE;
-  opacity: 1;
-  font-size: 15px;
+  color: #183B56;
+  font-size: 13px;
   width: 100%;
   max-width: 500px;
-  height: 45px;
+  font-weight: 600;
+  height: 50px;
   cursor: pointer;
   background: transparent;
-  transition: 0.1s;
-  border-bottom: 1px solid #64ffdb;
-  border-radius: 0;
+  border: none;
+  background: rgba(170, 170, 170, 0.1);
 }
 .page-for-form form .inputs-labels input::-moz-placeholder, .page-for-form form .inputs-labels textarea::-moz-placeholder {
-  opacity: 0.3;
-  color: #F9F6EE;
+  color: rgba(24, 59, 86, 0.671);
+  font-size: 15px;
 }
 .page-for-form form .inputs-labels input:-ms-input-placeholder, .page-for-form form .inputs-labels textarea:-ms-input-placeholder {
-  opacity: 0.3;
-  color: #F9F6EE;
+  color: rgba(24, 59, 86, 0.671);
+  font-size: 15px;
 }
 .page-for-form form .inputs-labels input::placeholder, .page-for-form form .inputs-labels textarea::placeholder {
-  opacity: 0.3;
-  color: #F9F6EE;
+  color: rgba(24, 59, 86, 0.671);
+  font-size: 15px;
 }
 .page-for-form form .inputs-labels input:hover, .page-for-form form .inputs-labels textarea:hover {
-  background: #306b97;
-  border-radius: 4px;
+  background: rgba(140, 140, 140, 0.1);
 }
-.page-for-form form .inputs-labels input:focus, .page-for-form form .inputs-labels textarea:focus {
+.page-for-form form .inputs-labels input:focus, .page-for-form form .inputs-labels input:active, .page-for-form form .inputs-labels textarea:focus, .page-for-form form .inputs-labels textarea:active {
+  cursor: text;
   background: transparent;
-  border: 2px solid #64FFDA;
-  border-radius: 4px;
 }
 .page-for-form form .inputs-labels textarea {
-  min-height: 100px;
-  max-height: 300px;
+  height: 100px;
+  min-height: 70px;
+  max-height: 150px;
 }
 .page-for-form form .form-actions {
-  margin-top: 35px;
-  text-align: center;
+  margin-top: 25px;
 }
 .page-for-form form .form-actions button {
-  width: 200px !important;
-  height: 56px !important;
-  opacity: 0.85;
+  width: 220px;
+  height: 55px;
+  background: #003A65;
+  color: #FAF9F6;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+.page-for-form form .form-actions button:hover {
+  transform: scale(1.05);
+  background: #02487e;
 }
 
-@media only screen and (min-device-width: 1150px) {
-  .width {
-    padding-inline: 0;
-  }
-  .page-for-form {
-    width: auto;
-    padding: 0;
+@media only screen and (min-device-width: 1145px) {
+  .form {
+    margin: unset;
+    text-align: left;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: unset;
+    padding: 20px 15px;
     position: relative;
-    top: 0;
-  }
-  .page-for-form .bottom-cover {
-    display: none;
-  }
-  .page-for-form .email {
-    display: flex;
-    align-items: center;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    position: absolute;
-    right: -180px;
-    bottom: 15px;
-    transform: rotate(-90deg);
-    opacity: 0.8;
-    overflow: hidden;
-    z-index: 10000;
-  }
-  .page-for-form .email span {
-    background: #64FFDA;
-    width: 300px;
-    height: 2px;
-    border-radius: 20px;
-  }
-  .page-for-form .email .small-paragraph {
-    margin-bottom: 0;
-    margin-left: 15px;
-    opacity: 1;
-    color: #64FFDA;
-    cursor: pointer;
-  }
-  .page-for-form .email .small-paragraph:hover {
-    text-decoration: underline;
-  }
-  .page-for-form .socials {
-    display: flex;
-    align-items: center;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    position: absolute;
-    left: -202.5px;
-    bottom: 15px;
-    transform: rotate(-90deg);
-    opacity: 0.7;
-    z-index: 10000;
-  }
-  .page-for-form .socials span {
-    background: #64FFDA;
-    width: 300px;
-    height: 2px;
-    border-radius: 20px;
-    margin-right: 15px;
-  }
-  .page-for-form .socials i {
-    color: #64FFDA;
-    cursor: pointer;
-    font-size: 21px;
-    padding: 5px;
-    margin: -5px;
-    margin-inline: 15px;
-    transform: rotate(90deg);
-  }
-  .page-for-form .socials i:hover {
-    transform: scale(1.1) rotate(90deg);
-  }
-  .page-for-form form {
-    position: relative;
-    top: 5px;
-    text-align: center;
-    width: auto;
-    padding: 0;
-  }
-  .page-for-form form .inputs-labels input, .page-for-form form .inputs-labels textarea {
-    font-size: 16px;
-  }
-  .page-for-form form .inputs-labels textarea {
-    min-height: 90px;
-    max-height: 350px;
-  }
-  .page-for-form form .form-actions button {
-    font-size: 15px;
-  }
-  .page-for-form form .form-actions button:hover {
-    background: rgba(65, 128, 177, 0.568627451);
-  }
-}
-@media only screen and (min-device-width: 1450px) {
-  .width {
-    padding-inline: 38px !important;
-  }
-  .page-for-form {
-    height: 100vh;
-  }
-  .page-for-form .email {
-    right: -180px;
-    bottom: 300px;
-  }
-  .page-for-form .email span {
-    width: 300px;
-  }
-  .page-for-form .socials {
-    left: -200px;
-    bottom: 300px;
-  }
-  .page-for-form .socials span {
-    width: 300px;
-  }
-  .page-for-form form {
-    top: 25px;
-  }
-}
-@media only screen and (min-device-width: 1590px) {
-  .width {
-    padding-inline: 120px !important;
-  }
-  .page-for-form form {
-    top: 25px;
-  }
-  .page-for-form form .inputs-labels textarea {
-    min-height: 110px;
-  }
-}
-@media only screen and (min-device-width: 1790px) {
-  .width {
-    padding-inline: 120px !important;
-  }
-  .page-for-form form {
-    top: 95px;
-  }
-  .page-for-form form .inputs-labels textarea {
-    min-height: 110px;
+    height: auto;
+    transform: translateX(90px);
   }
 }/*# sourceMappingURL=form.css.map */
