@@ -41,7 +41,7 @@
                     font-size: 15px;
                 }
                 &:hover{
-                    background: rgba(140,140,140,0.1);
+                    background: rgba(110,110,110,0.1);
                 }
                 &:focus, &:active{
                     cursor: text;
@@ -79,14 +79,24 @@
 }
 
 @media only screen and (min-device-width: 1145px) {
-    form{
-        margin: unset;
-        text-align: center;
-        width: 100%;
-        box-shadow: unset;
-        padding: 20px 15px;
-        position: relative;
-        height: auto;
-        margin-top: 50px;
+    .page-for-form{
+        form{
+            margin: unset;
+            text-align: center;
+            width: 100%;
+            box-shadow: unset;
+            padding: 20px 15px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            height: auto;
+            margin-top: 70px;
+            .headingp{
+                font-size: 14px;
+            }
+            .heading{
+                font-size: 39px
+            }
+        }
     }
 }

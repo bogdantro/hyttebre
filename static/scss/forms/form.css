@@ -45,7 +45,7 @@
   font-size: 15px;
 }
 .page-for-form form .inputs-labels input:hover, .page-for-form form .inputs-labels textarea:hover {
-  background: rgba(140, 140, 140, 0.1);
+  background: rgba(110, 110, 110, 0.1);
 }
 .page-for-form form .inputs-labels input:focus, .page-for-form form .inputs-labels input:active, .page-for-form form .inputs-labels textarea:focus, .page-for-form form .inputs-labels textarea:active {
   cursor: text;
@@ -76,14 +76,22 @@
 }
 
 @media only screen and (min-device-width: 1145px) {
-  form {
+  .page-for-form form {
     margin: unset;
     text-align: center;
     width: 100%;
     box-shadow: unset;
     padding: 20px 15px;
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     height: auto;
-    margin-top: 50px;
+    margin-top: 70px;
+  }
+  .page-for-form form .headingp {
+    font-size: 14px;
+  }
+  .page-for-form form .heading {
+    font-size: 39px;
   }
 }/*# sourceMappingURL=form.css.map */
