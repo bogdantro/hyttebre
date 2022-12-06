@@ -18,7 +18,7 @@
 #mobileNav.sticky {
   background: rgba(231, 253, 255, 0.9647058824);
   transition: 0.2s !important;
-  box-shadow: 0 1px 4px rgba(80, 80, 80, 0.1);
+  box-shadow: 0 1px 5px rgba(70, 70, 70, 0.1);
 }
 #mobileNav.sticky .logo h1 {
   color: #003A65;
@@ -215,12 +215,26 @@
     opacity: 0;
     transition: 0.4s;
   }
+  #desNav.sticky {
+    box-shadow: 0 1px 5px rgba(70, 70, 70, 0.1);
+  }
   #desNav.sticky::before {
     top: 0;
     opacity: 1;
   }
   #desNav.sticky .menu a {
     color: #003A65;
+  }
+  #desNav.sticky .menu a:hover {
+    border-bottom: 2px solid rgba(5, 67, 114, 0.7333333333);
+  }
+  #desNav.sticky .menu a.order {
+    background: #003A65;
+    border-radius: 4px;
+  }
+  #desNav.sticky .menu a.order:hover {
+    background: #075189;
+    border-bottom: 2px solid transparent;
   }
   #desNav.sticky .logo h1 {
     color: #003A65 !important;
@@ -259,17 +273,14 @@
     border-bottom: 2px solid transparent;
   }
   #desNav .menu a.order {
-    background: #003A65;
     padding: 10px 20px;
     color: #FAF9F6;
-    border-radius: 4px;
     transition: 0.2s;
   }
   #desNav .menu a.order:active, #desNav .menu a.order:hover {
     transform: scale(1.1);
-    background: #075189;
   }
   #desNav .menu a:hover {
-    border-bottom: 2px solid #003A65;
+    border-bottom: 2px solid rgba(250, 249, 246, 0.5607843137);
   }
 }/*# sourceMappingURL=nav.css.map */

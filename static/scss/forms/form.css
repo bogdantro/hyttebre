@@ -76,15 +76,14 @@
 }
 
 @media only screen and (min-device-width: 1145px) {
-  .form {
+  form {
     margin: unset;
-    text-align: left;
+    text-align: center;
     width: 100%;
-    max-width: 700px;
     box-shadow: unset;
     padding: 20px 15px;
     position: relative;
     height: auto;
-    transform: translateX(90px);
+    margin-top: 50px;
   }
 }/*# sourceMappingURL=form.css.map */

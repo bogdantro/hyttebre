@@ -5,6 +5,10 @@
     position: relative;
     padding-top: 70px;
     display: block;
+    // Mouse scroll
+    .scroll-downs{
+        display: none;
+    }
     // Cover image
     .cover-img{
         width: 100%;
@@ -12,7 +16,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        filter: brightness(60%);
+        filter: brightness(50%);
         object-fit: cover;
     }
     // Content
@@ -51,7 +55,6 @@
                 padding: 13px;
                 text-align: center;
                 &.primary{
-                    background: transparent;
                     color: #FAF9F6 !important;
                     border: 1px solid #FAF9F6;
                     background: rgba(180,180,180,0.2);
@@ -120,29 +123,60 @@
 
 // #1 breakpoint
 @media only screen and (min-device-width: 1150px)  {
-    // Hide mob cover on desktop
-    .mob-cover{
-        display: none;
-    }
     // Cover
-    .des-cover{
+    .cover{
         display: block;
         width: 100%;
         height: auto;
         position: relative;
         overflow: hidden;
-        height: 640px;
+        height: 100vh;
+        min-height: 570px;
+        max-height: 600px;
+        // Cover image
+        .cover-img{
+            filter: brightness(45%);
+        }
+        // Mouse scroll
+        .scroll-downs {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: auto;
+            display: block;
+            width :34px;
+            height: 55px;
+            z-index: 10000;
+            .mousey {
+                width: 3px;
+                padding: 10px 15px;
+                height: 35px;
+                border: 2px solid transparent;
+                border-radius: 25px;
+                opacity: 0.75;
+                box-sizing: content-box;
+            }
+            .scroller {
+                width: 3px;
+                height: 20px;
+                border-radius: 25%;
+                background-color: #fff;
+                animation-name: scroll;
+                animation-duration: 2.2s;
+                animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+                animation-iteration-count: infinite;
+            }
+        }
+          @keyframes scroll {
+            0% { opacity: 0; }
+            10% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(25px); opacity: 0;}
+          }
         // Content
         .content{
-            // Image
-            .cover-img{
-                width: 100%;
-                filter: brightness(75%);
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-            padding: 170px 40px;
+            padding: 70px 40px;
+            padding-bottom: 10px;
             // Text
             .text{
                 position: relative;
@@ -150,10 +184,13 @@
                 h1{
                     color: #FAF9F6;
                     font-size: 42px;
+                    margin-bottom: 10px;
                 }
                 p{
                     color: #FAF9F6;
                     font-size: 18px;
+                    width: 380px;
+                    margin-inline: auto;
                 }
             }
             // Cover CTAS
@@ -165,34 +202,83 @@
                 display: flex;
                 justify-content: center;
                 a{
-                    margin-inline: 32px;
                     display: block;
                     font-size: 17px;
                     text-decoration: none;
                     transition: .4s;
-                    width: 220px;
+                    width: 290px;
                     border-radius: 4px;
-                    padding: 10px;
+                    padding: 15px;
                     text-align: center;
                     cursor: pointer;
                     &.primary{
-                        background: #003A65;
+                        background: transparent;
                         color: #FAF9F6 !important;
-                        margin-top: 0;
+                        border: 1px solid #FAF9F6;
+                        background: rgba(180,180,180,0.2);
                         // When button clicked / hover
                         &:active, &:hover{
                             transform: scale(1.1);
-                            background: #02477c;
+                            background: rgba(180,180,180,0.3);
                         }
                     }
-                    &.secondary{
-                        background: transparent;
-                        color: #FAF9F6!important;
-                        border: 2px solid #FAF9F6;
-                        // When button clicked / hover
-                        &:active, &:hover{
-                            transform: scale(1.1);
-                            background: #ffffff18;
+                }
+            }
+        }
+    }
+
+    // Process
+    .process{
+        margin-top: 105px;
+        width: 100%;
+        height: auto;
+        // Content
+        .content{
+            padding-inline: 40px;
+            // Text
+            .text{
+                text-align: center;
+                .headingp{
+                    font-size: 14px;
+                }
+                h1{
+                    color: #003A65;
+                    font-size: 39px;
+                    font-weight: 400;
+                    margin-top: 6px;
+                    // Måtte skrive det her pgav det som ble skrevet lengre opp
+                    transform: translateX(0);
+                    // //
+                }
+            }
+            // Cards
+            .cards{
+                width: 100%;
+                height: auto;
+                margin-top: 38px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // Card
+                .card{
+                    border: none;
+                    background: transparent;
+                    margin-inline: 20px;
+                    margin-bottom: 0;
+                    img{
+                        width: 100%;
+                        max-width: 380px;
+                        height: auto;
+                        filter: brightness(90%);
+                        border-radius: 12px;
+                    }
+                    .card-text{
+                        margin-top: 10px;
+                        padding-left: 1px;
+                        h1{
+                            font-size: 22px;
+                            color: #003A65;
+                            font-weight: 700;
                         }
                     }
                 }
