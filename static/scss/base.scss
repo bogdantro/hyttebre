@@ -23,6 +23,13 @@
     .content{
         padding: 30px 30px 0 30px;
         width: 100%;
+        transform: translateX(-50px);
+        opacity: 0;
+        transition: .6s;
+        &.active{
+            opacity: 1;
+            transform: translateX(0);
+        }
         // Text
         .text{
             text-align: left;
@@ -68,9 +75,59 @@
     }
 }
 
+// Why us
+.why-us{
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+    // Content
+    .content{
+        padding-inline: 30px;
+        // Text
+        .text{
+            h1{
+                color: #003A65;
+                font-size: 32px;
+                font-weight: 400;
+                margin-top: 6px;
+                // Måtte skrive det her pgav den var ikke lina bra
+                transform: translateX(-2px);
+                // //
+            }
+        }
+    }
+}
+
+// What we do
+.what-we-do{
+    margin-top: 65px;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to bottom right, #003A65, #00599c);
+    // Content
+    .content{
+        padding: 45px 30px;
+        // Text
+        .text{
+            .headingp{
+                color: #FAF9F6;
+            }
+            h1{
+                color: #faf9f6ef;
+                font-size: 32px;
+                font-weight: 400;
+                margin-top: 6px;
+                // Måtte skrive det her pgav den var ikke lina bra
+                transform: translateX(-2px);
+                // //
+            }
+        }
+    }
+}
+
 // Process
 .process{
-    margin-top: 75px;
+    margin-top: 80px;
     width: 100%;
     height: auto;
     // Content

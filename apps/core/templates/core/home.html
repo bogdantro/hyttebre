@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="{% static '/scss/base.css' %}" type="text/css">
 <link rel="stylesheet" href="{% static '/scss/global/global.css' %}" type="text/css">
 <link rel="stylesheet" href="{% static '/scss/forms/form.css' %}" type="text/css">
+<script src="{% static 'js/home.js' %}"></script>
 
 <!-- Mob cover -->
 <div class="cover">
@@ -15,9 +16,9 @@
     </div>
   </div>
   <!-- Cover image -->
-  <img src="{% static 'images/covers/cover.jpg' %}" alt="" class="cover-img">
+  <img src="{% static 'images/covers/cover.jpg' %}" alt="" class="cover-img" id="coverImg">
   <!-- Content -->
-  <div class="content">
+  <div class="content" id="coverContent">
     <!-- Text -->
     <div class="text">
       <h1>Internett på hytta</h1>
@@ -26,6 +27,30 @@
     <!-- Cover CTAS -->
     <div class="cover-actions">
       <a class="primary">Om oss</a>
+    </div>
+  </div>
+</div>
+
+<!-- Why us -->
+<div class="why-us">
+    <!-- Content -->
+    <div class="content">
+      <!-- Text -->
+      <div class="text">
+        <p class="headingp">Hvorfor velge oss</p>
+        <h1>Aldri vært enklere å få nett på hytta</h1>
+      </div>
+    </div>
+</div>
+
+<!-- Hva vi gjør -->
+<div class="what-we-do">
+  <!-- Content -->
+  <div class="content">
+    <!-- Text -->
+    <div class="text">
+      <p class="headingp">Hva vi gjør</p>
+      <h1>Trådløst bredbånd med fri databruk</h1>
     </div>
   </div>
 </div>
@@ -75,6 +100,14 @@
   </div>
 </div>
 
+
+
+<br>
+<br>
+{% endblock %}
+
+
+
 <!-- Contact -->
 <div class="contact-us page-for-form">
   <form id="contactUs" action="" method="POST">
@@ -98,8 +131,3 @@
       </div>
     </form>
  </div>
-
-
-<br>
-<br>
-{% endblock %}

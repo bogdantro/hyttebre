@@ -15,10 +15,25 @@
   transition: 0.5s !important;
   background: transparent;
 }
+#mobileNav::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 75px;
+  background: rgba(231, 253, 255, 0.9450980392);
+  left: 0;
+  top: -20px;
+  opacity: 0;
+  transition: 0.4s;
+}
 #mobileNav.sticky {
-  background: rgba(231, 253, 255, 0.9647058824);
   transition: 0.2s !important;
   box-shadow: 0 1px 5px rgba(70, 70, 70, 0.1);
+}
+#mobileNav.sticky::before {
+  top: 0;
+  opacity: 1;
 }
 #mobileNav.sticky .logo h1 {
   color: #003A65;
@@ -47,6 +62,7 @@
   width: -moz-max-content;
   width: max-content;
   transition: 0.2s;
+  position: relative;
 }
 #mobileNav .logo h1 {
   font-size: 23px;
