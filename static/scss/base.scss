@@ -178,6 +178,150 @@
     }
 }
 
+// Order
+.order{
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    text-align: center;
+    // Form
+    form{
+        .form-heading{
+            color: #003A65;
+            font-size: 36px;
+        }
+        // Step
+        .step{
+            width: 100%;
+            height: auto;
+            padding-inline: 30px;
+            padding-top: 22px;
+            padding-bottom: 8px;
+            text-align: center;
+            display: block;
+            .step-heading{
+                color: #003A65;
+                font-size: 22px;
+            }
+            .paragraph{
+                padding-bottom: 12px;
+            }
+            .inputs{
+                width: 100%;
+                text-align: center;
+                input{
+                    border-radius: 25px;
+                    width: 100%;
+                    height: 50px;
+                    background: transparent;
+                    border: 1px solid #00396541;
+                    outline: none;
+                    display: block;
+                    margin-block: 35px;
+                    padding: 12px;
+                    font-size: 16px;
+                    color: #003A65;
+                    &::placeholder{
+                        color: #003A65;
+                        opacity: 0.6;
+                    }
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            // Actions
+            .step-actions{
+                margin-top: 33px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-inline: 7px;
+                i{
+                    color: #003A65;
+                    font-size: 30px;
+                    padding: 10px;
+                    margin: -10px;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    span{
+                        padding-inline: 5px;
+                        font-size: 14px;
+                        position: absolute;
+                        &.next{
+                            left: -45px;
+                        }
+                        &.last{
+                            right: -55px;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Step one
+        #stepOne{
+           #toLastStep{
+            opacity: 0 !important;
+            pointer-events: none;
+           }
+           #stepOneError{
+            width: 100%;
+            padding: 20px 5px;
+            text-align: center;
+            display: none;
+            border: 2px solid rgba(192, 0, 0, 0.349);
+            margin-bottom: 20px;
+            h1{
+                color: #003A65;
+                font-size: 17px;
+            }
+            &.active{
+                display: block;
+            }
+           }
+           &.active{
+            display: block;
+            }
+           &.hidden{
+            display: none;
+           }
+        }
+
+        // Step two
+        #stepTwo{
+            display: none;
+            .checkbox{
+                width: 100%;
+                padding: 25px 10px;
+                background: red;
+                border-radius: 4px;
+                outline: none;
+            }
+            &.active{
+                display: block;
+            }
+            &.hidden{
+                display: none;
+            }
+        }
+
+        // Step three
+        #stepThree{
+            display: none;
+        }
+        #stepFour{
+            
+        }
+    }
+}
+
+
+
 // #1 breakpoint
 @media only screen and (min-device-width: 1150px)  {
     // Cover

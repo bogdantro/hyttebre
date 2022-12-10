@@ -13,9 +13,32 @@ from django.db.models import *
 from django.contrib.auth.decorators import *
 
 
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from .forms import Order
+from django.template import RequestContext
+from base64 import b64encode
+from django.core.mail import send_mail, BadHeaderError
+from django.conf import settings
+from textwrap import dedent
+
+
+
 # Home
 def home(request):
-    return render(request, 'core/home.html')
+    # Order
+    if request.method == 'POST' and 'order':
+        form = Order(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    else:
+        form = Order()
+
+    return render(request, 'core/home.html', {'form': form})
+
+
+
 
     # Pages
 def about(request):
@@ -42,4 +65,6 @@ def contact(request):
         send_mail('Epost fra portfolio', message, '', ['sabertoothtri@gmail.com'])
         return redirect('/')
     return render(request, 'pages/contact.html')  
+
+
 

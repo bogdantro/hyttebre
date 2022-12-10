@@ -149,6 +149,138 @@
   font-weight: 700;
 }
 
+.order {
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+  text-align: center;
+}
+.order form .form-heading {
+  color: #003A65;
+  font-size: 36px;
+}
+.order form .step {
+  width: 100%;
+  height: auto;
+  padding-inline: 30px;
+  padding-top: 22px;
+  padding-bottom: 8px;
+  text-align: center;
+  display: block;
+}
+.order form .step .step-heading {
+  color: #003A65;
+  font-size: 22px;
+}
+.order form .step .paragraph {
+  padding-bottom: 12px;
+}
+.order form .step .inputs {
+  width: 100%;
+  text-align: center;
+}
+.order form .step .inputs input {
+  border-radius: 25px;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 1px solid rgba(0, 57, 101, 0.2549019608);
+  outline: none;
+  display: block;
+  margin-block: 35px;
+  padding: 12px;
+  font-size: 16px;
+  color: #003A65;
+}
+.order form .step .inputs input::-moz-placeholder {
+  color: #003A65;
+  opacity: 0.6;
+}
+.order form .step .inputs input:-ms-input-placeholder {
+  color: #003A65;
+  opacity: 0.6;
+}
+.order form .step .inputs input::placeholder {
+  color: #003A65;
+  opacity: 0.6;
+}
+.order form .step .inputs input:first-child {
+  margin-top: 0;
+}
+.order form .step .inputs input:last-child {
+  margin-bottom: 0;
+}
+.order form .step .step-actions {
+  margin-top: 33px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 7px;
+}
+.order form .step .step-actions i {
+  color: #003A65;
+  font-size: 30px;
+  padding: 10px;
+  margin: -10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.order form .step .step-actions i span {
+  padding-inline: 5px;
+  font-size: 14px;
+  position: absolute;
+}
+.order form .step .step-actions i span.next {
+  left: -45px;
+}
+.order form .step .step-actions i span.last {
+  right: -55px;
+}
+.order form #stepOne #toLastStep {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+.order form #stepOne #stepOneError {
+  width: 100%;
+  padding: 20px 5px;
+  text-align: center;
+  display: none;
+  border: 2px solid rgba(192, 0, 0, 0.349);
+  margin-bottom: 20px;
+}
+.order form #stepOne #stepOneError h1 {
+  color: #003A65;
+  font-size: 17px;
+}
+.order form #stepOne #stepOneError.active {
+  display: block;
+}
+.order form #stepOne.active {
+  display: block;
+}
+.order form #stepOne.hidden {
+  display: none;
+}
+.order form #stepTwo {
+  display: none;
+}
+.order form #stepTwo .checkbox {
+  width: 100%;
+  padding: 25px 10px;
+  background: red;
+  border-radius: 4px;
+  outline: none;
+}
+.order form #stepTwo.active {
+  display: block;
+}
+.order form #stepTwo.hidden {
+  display: none;
+}
+.order form #stepThree {
+  display: none;
+}
 @media only screen and (min-device-width: 1150px) {
   .cover {
     display: block;
