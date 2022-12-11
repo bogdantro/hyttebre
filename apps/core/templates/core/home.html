@@ -109,7 +109,7 @@
     <!-- Step one -->
     <div class="step one" id="stepOne">
       <h1 class="step-heading">Steg 1</h1>
-      <p class="paragraph">La oss se</p>
+      <p class="paragraph">La oss se hva vi kan levere av internett til deg</p>
       <div id="stepOneError"><h1>Har du glemt å fylle inn?</h1></div>
       <div class="inputs">
         <input type="text" name="adresse" id="adresse" placeholder="Adresse">
@@ -125,11 +125,26 @@
     <!-- Step two -->
     <div class="step two" id="stepTwo">
       <h1 class="step-heading">Steg 2</h1>
-      <p class="paragraph">La oss se</p>
+      <p class="paragraph">Hvilken internett leverandør vil du ha tilbud fra?<br><span style="font-size: 13px;">(Velg 1 eller flere)</span></be></p>
       <div class="inputs">
-        <input type="" class="checkbox" name="telia" id="telia" placeholder="Telia">
-        <input type="" class="checkbox" name="telenor" id="telenor" placeholder="Telenor">
-        <input type="" class="checkbox"sd name="altibox" id="altibox" placeholder="Altibox">
+        <!-- Telia -->
+        <div class="checkbox telia">
+          <h1 class="name">Telia</h1>
+          <img src="{% static 'images/other/telia.png' %}" alt="" class="supl-logo">
+        </div>
+        <!-- Telenor -->
+        <div class="checkbox telenor">
+          <h1 class="name">Telenor</h1>
+          <img src="{% static 'images/other/telenor.png' %}" alt="" class="supl-logo">
+        </div>
+        <!-- Altibox -->
+        <div class="checkbox altibox">
+          <h1 class="name">Altibox</h1>
+          <img src="{% static 'images/other/altibox.png' %}" alt="" class="supl-logo">
+        </div>
+        <input type="" class="hidden_checkbox" name="telia" id="telia" placeholder="Telia">
+        <input type="" class="hidden_checkbox" name="telenor" id="telenor" placeholder="Telenor">
+        <input type="" class="hidden_checkbox" name="altibox" id="altibox" placeholder="Altibox">
       </div>
       <div class="step-actions" id="stepActions">
         <i onclick="toStepOne()" class="fa-solid fa-arrow-left" id="toLastStep"><span class="last">Tilbake</span></i>

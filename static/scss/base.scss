@@ -204,7 +204,9 @@
                 font-size: 22px;
             }
             .paragraph{
-                padding-bottom: 12px;
+                padding-bottom: 16px;
+                font-size: 17px;
+                padding-inline: 15px;
             }
             .inputs{
                 width: 100%;
@@ -295,12 +297,64 @@
         // Step two
         #stepTwo{
             display: none;
+            .inputs{
+                margin-top: 5px;
+                .hidden_checkbox{
+                    opacity: 0;
+                    pointer-events: none;
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                }
+            }
             .checkbox{
                 width: 100%;
-                padding: 25px 10px;
-                background: red;
-                border-radius: 4px;
+                padding: 15px 10px;
+                border-radius: 30px;
                 outline: none;
+                border: 1px solid #0039657c;
+                text-align: center;
+                position: relative;
+                margin-block: 35px;
+                &:first-child{
+                    margin-top: 0;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .supl-logo{
+                    width: 39px;
+                    height: auto;
+                    position: absolute;
+                    right: 25px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                .name{
+                    font-size: 18px;
+                    transform: translateX(-18px) translateY(3px);
+                }
+                // Telia
+                &.telia{
+                    .name{
+                        color: #990AE3;
+                    }
+                }
+                // Telenor
+                &.telenor{
+                    .name{
+                        color: #00AEFE;
+                    }
+                }
+                // Altibox
+                &.altibox{
+                    .name{
+                        color: #FF271C;
+                    }
+                    .supl-logo{
+                        width: 53px;
+                    }
+                }
             }
             &.active{
                 display: block;

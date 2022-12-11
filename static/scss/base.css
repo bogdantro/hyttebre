@@ -173,7 +173,9 @@
   font-size: 22px;
 }
 .order form .step .paragraph {
-  padding-bottom: 12px;
+  padding-bottom: 16px;
+  font-size: 17px;
+  padding-inline: 15px;
 }
 .order form .step .inputs {
   width: 100%;
@@ -265,12 +267,55 @@
 .order form #stepTwo {
   display: none;
 }
+.order form #stepTwo .inputs {
+  margin-top: 5px;
+}
+.order form #stepTwo .inputs .hidden_checkbox {
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
 .order form #stepTwo .checkbox {
   width: 100%;
-  padding: 25px 10px;
-  background: red;
-  border-radius: 4px;
+  padding: 15px 10px;
+  border-radius: 30px;
   outline: none;
+  border: 1px solid rgba(0, 57, 101, 0.4862745098);
+  text-align: center;
+  position: relative;
+  margin-block: 35px;
+}
+.order form #stepTwo .checkbox:first-child {
+  margin-top: 0;
+}
+.order form #stepTwo .checkbox:last-child {
+  margin-bottom: 0;
+}
+.order form #stepTwo .checkbox .supl-logo {
+  width: 39px;
+  height: auto;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.order form #stepTwo .checkbox .name {
+  font-size: 18px;
+  transform: translateX(-18px) translateY(3px);
+}
+.order form #stepTwo .checkbox.telia .name {
+  color: #990AE3;
+}
+.order form #stepTwo .checkbox.telenor .name {
+  color: #00AEFE;
+}
+.order form #stepTwo .checkbox.altibox .name {
+  color: #FF271C;
+}
+.order form #stepTwo .checkbox.altibox .supl-logo {
+  width: 53px;
 }
 .order form #stepTwo.active {
   display: block;
