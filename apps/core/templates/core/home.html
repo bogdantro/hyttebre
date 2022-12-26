@@ -16,7 +16,7 @@
     </div>
   </div>
   <!-- Cover image -->
-  <img src="{% static 'images/covers/cover.jpg' %}" alt="" class="cover-img" id="coverImg">
+  <!-- <img src="{% static 'images/covers/cover.jpg' %}" alt="" class="cover-img" id="coverImg"> -->
   <!-- Content -->
   <div class="content" id="coverContent">
     <!-- Text -->
@@ -35,6 +35,7 @@
     <h1 class="form-heading">Finn det beste brebånd tilbudet i ditt område</h1>
     <!-- Step one -->
     <div class="step one" id="stepOne">
+      <p class="paragraph">Hvor ligger hytta?</p>
       <div id="stepOneError" class="alert alert-danger" role="alert">Har du glemt å fylle inn?</div>
       <div class="inputs">
         <input type="text" name="adresse" id="adresse" placeholder="Adresse">
@@ -49,6 +50,7 @@
 
     <!-- Step two -->
     <div class="step two" id="stepTwo">
+      <p class="paragraph">Velg en eller flere</p>
       <div id="stepTwoError" class="alert alert-danger" role="alert">Du må velge minst en</div>
       <div class="inputs">
         <!-- Telia -->
@@ -78,10 +80,15 @@
 
     <!-- Step three -->
     <div class="step three" id="stepThree">
+      <p class="paragraph">Kontaktinformasjon</p>
       <div class="inputs">
         <input type="text" name="navn" id="navn" placeholder="Din navn">
         <input type="email" name="epost" id="epost" placeholder="Din epost">
         <input type="number" name="mobil_nummer" id="mobil_nummer" placeholder="Din telefon nummer">
+      </div>
+      <div class="step-actions">
+        <i class="fa-solid fa-arrow-left" id="toLastStep"><span class="last">Tilbake</span></i>
+        <i onclick="toStepTwo()" class="fa-solid fa-arrow-right" id="toNextStep"><span class="next">Neste</span></i>
       </div>
     </div>
     <!-- <button type="submit" name="order" value="order">send</button> -->

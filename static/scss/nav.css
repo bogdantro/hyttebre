@@ -66,11 +66,11 @@
 }
 #mobileNav .logo h1 {
   font-size: 23px;
-  color: #FAF9F6;
+  color: #003A65;
 }
 #mobileNav .logo h1 span {
   font-size: 16px;
-  border-bottom: 1px solid rgba(250, 249, 246, 0.5215686275);
+  border-bottom: 1px solid rgba(0, 57, 101, 0.662745098);
   padding-bottom: 2px;
   margin-left: 4px;
 }
@@ -93,7 +93,7 @@
   transition: 0.5s;
   width: 26px;
   height: 2px;
-  background: #FAF9F6;
+  background: #003A65;
   display: block;
   position: relative;
   border-radius: 20px;

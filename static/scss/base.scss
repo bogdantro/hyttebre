@@ -5,7 +5,9 @@
     position: relative;
     padding-top: 0;
     display: block;
-    padding: 85px 30px;
+    padding: 95px 30px;
+    padding-bottom: 55px;
+    background: linear-gradient(to top right, #E7FDFF, white);
     // Mouse scroll
     .scroll-downs{
         display: none;
@@ -31,13 +33,13 @@
             h1{
                 position: relative;
                 display: block;
-                color: #FAF9F6;
+                color: #003A65;
                 font-size: 38px;
                 font-weight: 400;
                 margin-bottom: 10px;
             }
             p{
-                color: #FAF9F6;
+                color: #003A65;
                 font-size: 18px;
             }
         }
@@ -50,7 +52,6 @@
     height: auto;
     text-align: center;
     padding-inline: 15px;
-    margin-top: 20px;
     // Form
     form{
         background: linear-gradient(to bottom right, #003A65, #00599c);
@@ -280,13 +281,17 @@
     margin-top: 60px;
     width: 100%;
     height: auto;
+    background: linear-gradient(to bottom right, #003A65, #00599c);
     // Content
     .content{
-        padding-inline: 30px;
+        padding: 45px 30px;
         // Text
         .text{
+            .headingp{
+                color: #FAF9F6;
+            }
             h1{
-                color: #003A65;
+                color: #faf9f6ef;
                 font-size: 32px;
                 font-weight: 400;
                 margin-top: 6px;
@@ -300,20 +305,16 @@
 
 // What we do
 .what-we-do{
-    margin-top: 65px;
+    margin-top: 30px;
     width: 100%;
     height: auto;
-    background: linear-gradient(to bottom right, #003A65, #00599c);
     // Content
     .content{
         padding: 45px 30px;
         // Text
         .text{
-            .headingp{
-                color: #FAF9F6;
-            }
             h1{
-                color: #faf9f6ef;
+                color: #003A65;
                 font-size: 32px;
                 font-weight: 400;
                 margin-top: 6px;
