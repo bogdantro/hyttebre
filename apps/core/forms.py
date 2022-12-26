@@ -8,7 +8,7 @@ class Order(forms.ModelForm):
 
     class Meta:
         model = Order
-        fields = ('navn', 'epost', 'mobil_nummer', 'adresse', 'postnummer', 'telia', 'telenor', 'altibox', 'contact_by_phone', 'contact_by_email',)
+        fields = ('navn', 'epost', 'mobil_nummer', 'adresse', 'postnummer', 'gatenummer', 'telia', 'telenor', 'altibox', 'contact_by_phone', 'contact_by_email',)
 
 
 

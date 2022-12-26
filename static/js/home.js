@@ -28,6 +28,17 @@ function toStepTwo(){
     }
 }
 
+function toStepTwoNoValidate(){
+    const stepThree = document.getElementById('stepThree');
+    const stepTwo = document.getElementById('stepTwo');
+
+    stepThree.classList.add('hidden')
+        
+    stepTwo.classList.remove('hidden')
+    stepTwo.classList.add('active')        
+
+}
+
 
 function toStepThree(){
     const stepTwo = document.getElementById('stepTwo');
@@ -46,6 +57,26 @@ function toStepThree(){
         document.getElementById('stepTwoError').classList.remove('active');
     }else{
         document.getElementById('stepTwoError').classList.add('active');
+    }
+}
+
+function toStepFour(){
+    const stepThree = document.getElementById('stepThree');
+    const stepFour = document.getElementById('stepFour');
+
+    const navn = document.getElementById('navn');
+    const epost = document.getElementById('epost');
+    const mobil_nummer = document.getElementById('mobil_nummer');
+
+    if(navn.value && epost.value && mobil_nummer.value){   
+
+        stepThree.classList.remove('active')        
+        stepThree.classList.add('hidden')
+        
+        stepFour.classList.add('active')
+        document.getElementById('stepThreeError').classList.remove('active');
+    }else{
+        document.getElementById('stepThreeError').classList.add('active');
     }
 }
 
@@ -94,5 +125,35 @@ function chooseAltibox(){
         altiboxCheckbox.classList.remove('clicked');
         
         altiboxHiddenCheckbox.checked = false;
+    }
+}
+
+function chooseContactedByNumber(){
+    const phoneNumberCheckbox = document.getElementById('phoneNumberCheckbox');
+    const phoneNumberHiddenCheckbox = document.getElementById('contact_by_phone');
+
+    if (phoneNumberHiddenCheckbox.checked==false){
+        phoneNumberCheckbox.classList.add('clicked');
+
+        phoneNumberHiddenCheckbox.checked = true;
+    }else{
+        phoneNumberCheckbox.classList.remove('clicked');
+        
+        phoneNumberHiddenCheckbox.checked = false;
+    }
+}
+
+function chooseContactedByEmail(){
+    const emailCheckbox = document.getElementById('emailCheckbox');
+    const emailHiddenCheckbox = document.getElementById('contact_by_email');
+
+    if (emailHiddenCheckbox.checked==false){
+        emailCheckbox.classList.add('clicked');
+
+        emailHiddenCheckbox.checked = true;
+    }else{
+        emailCheckbox.classList.remove('clicked');
+        
+        emailHiddenCheckbox.checked = false;
     }
 }

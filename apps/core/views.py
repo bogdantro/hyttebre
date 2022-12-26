@@ -31,7 +31,7 @@ def home(request):
         form = Order(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return redirect('/suksee/')
     else:
         form = Order()
 
@@ -63,8 +63,10 @@ def contact(request):
         Beskjed: {}
         ''').format(data['email'], data['navn'], data['message'], )
         send_mail('Epost fra portfolio', message, '', ['sabertoothtri@gmail.com'])
-        return redirect('/')
+        return redirect('/suksee/')
     return render(request, 'pages/contact.html')  
 
 
 
+def order_success(request):
+    return render(request, 'pages/success.html')

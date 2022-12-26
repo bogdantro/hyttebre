@@ -7,7 +7,7 @@
   padding-top: 0;
   display: block;
   padding: 95px 30px;
-  padding-bottom: 55px;
+  padding-bottom: 50px;
   background: linear-gradient(to top right, #E7FDFF, white);
 }
 .cover .scroll-downs {
@@ -29,7 +29,7 @@
   transform: translateX(0);
 }
 .cover .content .text {
-  text-align: left;
+  text-align: center;
 }
 .cover .content .text h1 {
   position: relative;
@@ -250,12 +250,89 @@
 .order form #stepThree {
   display: none;
 }
+.order form #stepThree #stepThreeError {
+  display: none;
+}
+.order form #stepThree #stepThreeError.active {
+  display: block;
+}
 .order form #stepThree.active {
   display: block;
 }
 .order form #stepThree.hidden {
   display: none;
 }
+.order form #stepFour {
+  display: none;
+}
+.order form #stepFour button {
+  width: 80%;
+  color: #003A65;
+  padding: 15px;
+  background: #E7FDFF;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.order form #stepFour button:hover {
+  transform: scale(1.1);
+}
+.order form #stepFour #stepFourError {
+  display: none;
+}
+.order form #stepFour #stepFourError.active {
+  display: block;
+}
+.order form #stepFour .hidden_checkbox {
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.order form #stepFour .checkbox {
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 30px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.4666666667);
+  text-align: center;
+  position: relative;
+  margin-block: 35px;
+  transition: 0.2s;
+}
+.order form #stepFour .checkbox i {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FAF9F6;
+  font-size: 24px;
+}
+.order form #stepFour .checkbox:first-child {
+  margin-top: 0;
+}
+.order form #stepFour .checkbox:last-child {
+  margin-bottom: 0;
+}
+.order form #stepFour .checkbox.clicked {
+  transform: scale(1.05);
+  background: rgba(220, 220, 220, 0.1) !important;
+}
+.order form #stepFour .checkbox .name {
+  font-size: 18px;
+  transform: translateX(-18px) translateY(3px);
+  color: #FAF9F6;
+}
+.order form #stepFour.active {
+  display: block;
+}
+.order form #stepFour.hidden {
+  display: none;
+}
+
 .why-us {
   margin-top: 60px;
   width: 100%;

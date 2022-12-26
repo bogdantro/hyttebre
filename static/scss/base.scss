@@ -6,7 +6,7 @@
     padding-top: 0;
     display: block;
     padding: 95px 30px;
-    padding-bottom: 55px;
+    padding-bottom: 50px;
     background: linear-gradient(to top right, #E7FDFF, white);
     // Mouse scroll
     .scroll-downs{
@@ -29,7 +29,7 @@
         transform: translateX(0);
         // Text
         .text{
-            text-align: left;
+            text-align: center;
             h1{
                 position: relative;
                 display: block;
@@ -263,6 +263,12 @@
         // Step three
         #stepThree{
             display: none;
+            #stepThreeError{
+                display: none;
+                &.active{
+                    display: block;
+                }
+               }
             &.active{
                 display: block;
                 }
@@ -270,9 +276,78 @@
                 display: none;
                }
         }
+        
+        // Step four
         #stepFour{
-            
-        }
+            display: none;
+            button{
+                width: 80%;
+                color: #003A65;
+                padding: 15px;
+                background: #E7FDFF;
+                outline: none;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: .2s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+            #stepFourError{
+             display: none;
+             &.active{
+                 display: block;
+             }
+            }
+            .hidden_checkbox{
+                opacity: 0;
+                pointer-events: none;
+                width: 0;
+                height: 0;
+                position: absolute;
+            }
+            .checkbox{
+                width: 100%;
+                padding: 15px 10px;
+                border-radius: 30px;
+                outline: none;
+                border: 1px solid #ffffff77;
+                text-align: center;
+                position: relative;
+                margin-block: 35px;
+                transition: .2s;
+                i{
+                    position: absolute;
+                    right: 35px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #FAF9F6;
+                    font-size: 24px;
+                }
+                &:first-child{
+                    margin-top: 0;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &.clicked{
+                    transform: scale(1.05);
+                    background: rgba(220, 220, 220, 0.1) !important;
+                }
+                .name{
+                    font-size: 18px;
+                    transform: translateX(-18px) translateY(3px);
+                    color: #FAF9F6;
+                }
+            }
+            &.active{
+             display: block;
+             }
+            &.hidden{
+             display: none;
+            }
+         }
     }
 }
 

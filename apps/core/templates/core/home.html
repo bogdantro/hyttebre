@@ -31,7 +31,11 @@
 <div class="order">
   <form method='POST' name="order" id="makeOrder" enctype="multipart/form-data">
     {% csrf_token %}
-    {{form.errors}}
+    {% if form.erros %}
+    <div class="alert alert-info">
+      {{form.errors}}
+    </div>
+    {% endif %}
     <h1 class="form-heading">Finn det beste brebånd tilbudet i ditt område</h1>
     <!-- Step one -->
     <div class="step one" id="stepOne">
@@ -81,17 +85,37 @@
     <!-- Step three -->
     <div class="step three" id="stepThree">
       <p class="paragraph">Kontaktinformasjon</p>
+      <div id="stepThreeError" class="alert alert-danger" role="alert">Du må oppgi kontaktinformasjon</div>
       <div class="inputs">
         <input type="text" name="navn" id="navn" placeholder="Din navn">
         <input type="email" name="epost" id="epost" placeholder="Din epost">
         <input type="number" name="mobil_nummer" id="mobil_nummer" placeholder="Din telefon nummer">
       </div>
       <div class="step-actions">
-        <i class="fa-solid fa-arrow-left" id="toLastStep"><span class="last">Tilbake</span></i>
-        <i onclick="toStepTwo()" class="fa-solid fa-arrow-right" id="toNextStep"><span class="next">Neste</span></i>
+        <i onclick="toStepTwoNoValidate()" class="fa-solid fa-arrow-left" id="toLastStep"><span class="last">Tilbake</span></i>
+        <i onclick="toStepFour()" class="fa-solid fa-arrow-right" id="toNextStep"><span class="next">Neste</span></i>
       </div>
     </div>
-    <!-- <button type="submit" name="order" value="order">send</button> -->
+
+    <!-- Step four -->
+    <div class="step four" id="stepFour">
+      <p class="paragraph">Hvordan ønkser du bli kontaket?</p>
+      <div class="inputs">
+        <!-- Email -->
+        <div class="checkbox altibox" id="phoneNumberCheckbox" onclick="chooseContactedByNumber()">
+          <h1 class="name">Via telefon</h1>
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <!-- Phone number -->
+        <div class="checkbox telenor" id="emailCheckbox" onclick="chooseContactedByEmail()">
+          <h1 class="name">Via epost</h1>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <input type="checkbox" class="hidden_checkbox" name="contact_by_phone" id="contact_by_phone">
+        <input type="checkbox" class="hidden_checkbox" name="contact_by_email" id="contact_by_email">
+      </div>
+      <button type="submit" name="order" value="order">Send skjema</button>
+    </div>
   </form>
 </div>
 
