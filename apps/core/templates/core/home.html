@@ -24,35 +24,68 @@
       <h1>Internett på hytta</h1>
       <p class="paragraph">Med trådløst bredbånd får du et raskt og stabilt nett med fri databruk</p>
     </div>
-    <!-- Cover CTAS -->
-    <div class="cover-actions">
-      <a class="primary">Om oss</a>
-    </div>
   </div>
 </div>
 
-<!-- Why us -->
-<div class="why-us">
-    <!-- Content -->
-    <div class="content">
-      <!-- Text -->
-      <div class="text">
-        <p class="headingp">Hvorfor velge oss</p>
-        <h1>Aldri vært enklere å få nett på hytta</h1>
+<!-- Order -->
+<div class="order">
+  <form method='POST' name="order" id="makeOrder" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.errors}}
+    <h1 class="form-heading">Finn det beste brebånd tilbudet i ditt område</h1>
+    <!-- Step one -->
+    <div class="step one" id="stepOne">
+      <div id="stepOneError" class="alert alert-danger" role="alert">Har du glemt å fylle inn?</div>
+      <div class="inputs">
+        <input type="text" name="adresse" id="adresse" placeholder="Adresse">
+        <input type="number" name="gatenummer" id="gatenummer" placeholder="Gatenummer">
+        <input type="number" name="postnummer" id="postnummer" placeholder="Postnummer">
+      </div>
+      <div class="step-actions">
+        <i class="fa-solid fa-arrow-left" id="toLastStep"><span class="last">Tilbake</span></i>
+        <i onclick="toStepTwo()" class="fa-solid fa-arrow-right" id="toNextStep"><span class="next">Neste</span></i>
       </div>
     </div>
-</div>
 
-<!-- Hva vi gjør -->
-<div class="what-we-do">
-  <!-- Content -->
-  <div class="content">
-    <!-- Text -->
-    <div class="text">
-      <p class="headingp">Hva vi gjør</p>
-      <h1>Internett på hytta med fri databruk</h1>
+    <!-- Step two -->
+    <div class="step two" id="stepTwo">
+      <div id="stepTwoError" class="alert alert-danger" role="alert">Du må velge minst en</div>
+      <div class="inputs">
+        <!-- Telia -->
+        <div class="checkbox telia" id="teliaCheckbox" onclick="chooseTelia()">
+          <h1 class="name">Telia</h1>
+          <img src="{% static 'images/other/telia.png' %}" alt="" class="supl-logo">
+        </div>
+        <!-- Altibox -->
+        <div class="checkbox altibox" id="altiboxCheckbox" onclick="chooseAltibox()">
+          <h1 class="name">Altibox</h1>
+          <img src="{% static 'images/other/altibox.png' %}" alt="" class="supl-logo">
+        </div>
+        <!-- Telenor -->
+        <div class="checkbox telenor" id="telenorCheckbox" onclick="chooseTelenor()">
+          <h1 class="name">Telenor</h1>
+          <img src="{% static 'images/other/telenor.png' %}" alt="" class="supl-logo">
+        </div>
+        <input type="checkbox" class="hidden_checkbox" name="telia" id="telia" placeholder="Telia">
+        <input type="checkbox" class="hidden_checkbox" name="telenor" id="telenor" placeholder="Telenor">
+        <input type="checkbox" class="hidden_checkbox" name="altibox" id="altibox" placeholder="Altibox">
+      </div>
+      <div class="step-actions" id="stepActions">
+        <i onclick="toStepOne()" class="fa-solid fa-arrow-left" id="toLastStep"><span class="last">Tilbake</span></i>
+        <i onclick="toStepThree()" class="fa-solid fa-arrow-right" id="toNextStep"><span class="next">Neste</span></i>
+      </div>
     </div>
-  </div>
+
+    <!-- Step three -->
+    <div class="step three" id="stepThree">
+      <div class="inputs">
+        <input type="text" name="navn" id="navn" placeholder="Din navn">
+        <input type="email" name="epost" id="epost" placeholder="Din epost">
+        <input type="number" name="mobil_nummer" id="mobil_nummer" placeholder="Din telefon nummer">
+      </div>
+    </div>
+    <!-- <button type="submit" name="order" value="order">send</button> -->
+  </form>
 </div>
 
 <!-- Process -->
@@ -100,70 +133,31 @@
   </div>
 </div>
 
-<!-- Order -->
-<div class="order">
-  <form method='POST' name="order" id="makeOrder" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form.errors}}
-    <h1 class="form-heading">Kom i gang</h1>
-    <!-- Step one -->
-    <div class="step one" id="stepOne">
-      <h1 class="step-heading">Steg 1</h1>
-      <p class="paragraph">La oss se hva vi kan levere av internett til deg</p>
-      <div id="stepOneError"><h1>Har du glemt å fylle inn?</h1></div>
-      <div class="inputs">
-        <input type="text" name="adresse" id="adresse" placeholder="Adresse">
-        <input type="number" name="gatenummer" id="gatenummer" placeholder="Gatenummer">
-        <input type="number" name="postnummer" id="postnummer" placeholder="Postnummer">
-      </div>
-      <div class="step-actions">
-        <i class="fa-solid fa-arrow-left" id="toLastStep"><span class="last">Tilbake</span></i>
-        <i onclick="toStepTwo()" class="fa-solid fa-arrow-right" id="toNextStep"><span class="next">Neste</span></i>
+<!-- Why us -->
+<div class="why-us">
+    <!-- Content -->
+    <div class="content">
+      <!-- Text -->
+      <div class="text">
+        <p class="headingp">Hvorfor velge oss</p>
+        <h1>Aldri vært enklere å få nett på hytta</h1>
       </div>
     </div>
-
-    <!-- Step two -->
-    <div class="step two" id="stepTwo">
-      <h1 class="step-heading">Steg 2</h1>
-      <p class="paragraph">Hvilken internett leverandør vil du ha tilbud fra?<br><span style="font-size: 13px;">(Velg 1 eller flere)</span></be></p>
-      <div class="inputs">
-        <!-- Telia -->
-        <div class="checkbox telia">
-          <h1 class="name">Telia</h1>
-          <img src="{% static 'images/other/telia.png' %}" alt="" class="supl-logo">
-        </div>
-        <!-- Telenor -->
-        <div class="checkbox telenor">
-          <h1 class="name">Telenor</h1>
-          <img src="{% static 'images/other/telenor.png' %}" alt="" class="supl-logo">
-        </div>
-        <!-- Altibox -->
-        <div class="checkbox altibox">
-          <h1 class="name">Altibox</h1>
-          <img src="{% static 'images/other/altibox.png' %}" alt="" class="supl-logo">
-        </div>
-        <input type="" class="hidden_checkbox" name="telia" id="telia" placeholder="Telia">
-        <input type="" class="hidden_checkbox" name="telenor" id="telenor" placeholder="Telenor">
-        <input type="" class="hidden_checkbox" name="altibox" id="altibox" placeholder="Altibox">
-      </div>
-      <div class="step-actions" id="stepActions">
-        <i onclick="toStepOne()" class="fa-solid fa-arrow-left" id="toLastStep"><span class="last">Tilbake</span></i>
-        <i onclick="toStepTwo()" class="fa-solid fa-arrow-right" id="toNextStep"><span class="next">Neste</span></i>
-      </div>
-    </div>
-
-    <!-- Step three -->
-    <div class="step three" id="stepThree">
-      <h1 class="step-heading">Steg 3</h1>
-      <div class="inputs">
-        <input type="text" name="navn" id="navn" placeholder="Din navn">
-        <input type="email" name="epost" id="epost" placeholder="Din epost">
-        <input type="number" name="mobil_nummer" id="mobil_nummer" placeholder="Din telefon nummer">
-      </div>
-    </div>
-    <!-- <button type="submit" name="order" value="order">send</button> -->
-  </form>
 </div>
+
+<!-- Hva vi gjør -->
+<div class="what-we-do">
+  <!-- Content -->
+  <div class="content">
+    <!-- Text -->
+    <div class="text">
+      <p class="headingp">Hva vi gjør</p>
+      <h1>Internett på hytta med fri databruk</h1>
+    </div>
+  </div>
+</div>
+
+
 
 
 <br>

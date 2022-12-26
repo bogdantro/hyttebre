@@ -1,10 +1,11 @@
 // Cover
 .cover{
-    height: 470px;
+    height: max-content;
     width: 100%;
     position: relative;
-    padding-top: 70px;
+    padding-top: 0;
     display: block;
+    padding: 85px 30px;
     // Mouse scroll
     .scroll-downs{
         display: none;
@@ -16,20 +17,14 @@
         position: absolute;
         left: 0;
         top: 0;
-        filter: brightness(50%);
+        filter: brightness(58%);
         object-fit: cover;
     }
     // Content
     .content{
-        padding: 30px 30px 0 30px;
         width: 100%;
-        transform: translateX(-50px);
-        opacity: 0;
-        transition: .6s;
-        &.active{
-            opacity: 1;
-            transform: translateX(0);
-        }
+        opacity: 1;
+        transform: translateX(0);
         // Text
         .text{
             text-align: left;
@@ -46,31 +41,236 @@
                 font-size: 18px;
             }
         }
-        // Cover CTAS
-        .cover-actions{
-            width: auto;
+    }
+}
+
+// Order
+.order{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-inline: 15px;
+    margin-top: 20px;
+    // Form
+    form{
+        background: linear-gradient(to bottom right, #003A65, #00599c);
+        border-radius: 4px;
+        padding: 25px 5px;
+        .form-heading{
+            color: #FAF9F6;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        // Step
+        .step{
+            width: 100%;
             height: auto;
-            margin-top: 30px;
-            position: relative;
-            a{
-                display: block;
+            padding-inline: 20px;
+            padding-top: 22px;
+            padding-bottom: 8px;
+            text-align: center;
+            display: block;
+            .step-heading{
+                color: #FAF9F6;
+                font-size: 22px;
+            }
+            .paragraph{
+                padding-bottom: 16px;
                 font-size: 17px;
-                text-decoration: none;
-                transition: .4s;
-                width: 220px;
-                border-radius: 4px;
-                padding: 13px;
+                padding-inline: 15px;
+                color: #FAF9F6;
+            }
+            .inputs{
+                width: 100%;
                 text-align: center;
-                &.primary{
-                    color: #FAF9F6 !important;
-                    border: 1px solid #FAF9F6;
-                    background: rgba(180,180,180,0.2);
-                    // When button clicked / hover
-                    &:active, &:hover{
-                        transform: scale(1.1);
+                input{
+                    border-radius: 25px;
+                    width: 100%;
+                    height: 50px;
+                    background: transparent;
+                    border: 1px solid #ffffff77;
+                    outline: none;
+                    display: block;
+                    margin-block: 35px;
+                    padding: 12px;
+                    font-size: 16px;
+                    color: #FAF9F6;
+                    &::placeholder{
+                        color: #FAF9F6;
+                        opacity: 0.6;
+                    }
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
                     }
                 }
             }
+            // Actions
+            .step-actions{
+                margin-top: 33px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-inline: 7px;
+                i{
+                    color: #FAF9F6;
+                    font-size: 30px;
+                    padding: 10px;
+                    margin: -10px;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    font-weight: 600;
+                    span{
+                        padding-inline: 5px;
+                        font-size: 14px;
+                        position: absolute;
+                        &.next{
+                            left: -45px;
+                        }
+                        &.last{
+                            right: -55px;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Step one
+        #stepOne{
+           #toLastStep{
+            opacity: 0 !important;
+            pointer-events: none;
+           }
+           #stepOneError{
+            display: none;
+            &.active{
+                display: block;
+            }
+           }
+           &.active{
+            display: block;
+            }
+           &.hidden{
+            display: none;
+           }
+        }
+
+        // Step two
+        #stepTwo{
+            display: none;
+            #stepTwoError{
+                display: none;
+                &.active{
+                    display: block;
+                }
+               }
+            .inputs{
+                margin-top: 5px;
+                .hidden_checkbox{
+                    opacity: 0;
+                    pointer-events: none;
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                }
+                // Checkboxes
+                #teliaCheckbox{
+                    background: transparent;
+                    transition: .2s;
+                    &.clicked{
+                        transform: scale(1.05);
+                        background: rgba(220, 220, 220, 0.1) !important;
+                    }
+                }
+                #telenorCheckbox{
+                    background: transparent;
+                    transition: .2s;
+                    &.clicked{
+                        transform: scale(1.05);
+                        background: rgba(220, 220, 220, 0.1) !important;
+                    }
+                }
+                #altiboxCheckbox{
+                    background: transparent;
+                    transition: .2s;
+                    &.clicked{
+                        transform: scale(1.05);
+                        background: rgba(220, 220, 220, 0.1) !important;
+                    }
+                }
+            }
+            .checkbox{
+                width: 100%;
+                padding: 15px 10px;
+                border-radius: 30px;
+                outline: none;
+                border: 1px solid #ffffff77;
+                text-align: center;
+                position: relative;
+                margin-block: 35px;
+                &:first-child{
+                    margin-top: 0;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .supl-logo{
+                    width: 39px;
+                    height: auto;
+                    position: absolute;
+                    right: 25px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                .name{
+                    font-size: 18px;
+                    transform: translateX(-18px) translateY(3px);
+                }
+                // Telia
+                &.telia{
+                    .name{
+                        color: #FAF9F6;
+                    }
+                }
+                // Telenor
+                &.telenor{
+                    .name{
+                        color: #FAF9F6;
+                    }
+                }
+                // Altibox
+                &.altibox{
+                    .name{
+                        color: #FAF9F6;
+                    }
+                    .supl-logo{
+                        width: 53px;
+                    }
+                }
+            }
+            &.active{
+                display: block;
+            }
+            &.hidden{
+                display: none;
+            }
+        }
+
+        // Step three
+        #stepThree{
+            display: none;
+            &.active{
+                display: block;
+                }
+               &.hidden{
+                display: none;
+               }
+        }
+        #stepFour{
+            
         }
     }
 }
@@ -178,201 +378,6 @@
     }
 }
 
-// Order
-.order{
-    width: 100%;
-    height: auto;
-    margin-top: 60px;
-    text-align: center;
-    // Form
-    form{
-        .form-heading{
-            color: #003A65;
-            font-size: 36px;
-        }
-        // Step
-        .step{
-            width: 100%;
-            height: auto;
-            padding-inline: 30px;
-            padding-top: 22px;
-            padding-bottom: 8px;
-            text-align: center;
-            display: block;
-            .step-heading{
-                color: #003A65;
-                font-size: 22px;
-            }
-            .paragraph{
-                padding-bottom: 16px;
-                font-size: 17px;
-                padding-inline: 15px;
-            }
-            .inputs{
-                width: 100%;
-                text-align: center;
-                input{
-                    border-radius: 25px;
-                    width: 100%;
-                    height: 50px;
-                    background: transparent;
-                    border: 1px solid #00396541;
-                    outline: none;
-                    display: block;
-                    margin-block: 35px;
-                    padding: 12px;
-                    font-size: 16px;
-                    color: #003A65;
-                    &::placeholder{
-                        color: #003A65;
-                        opacity: 0.6;
-                    }
-                    &:first-child{
-                        margin-top: 0;
-                    }
-                    &:last-child{
-                        margin-bottom: 0;
-                    }
-                }
-            }
-            // Actions
-            .step-actions{
-                margin-top: 33px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding-inline: 7px;
-                i{
-                    color: #003A65;
-                    font-size: 30px;
-                    padding: 10px;
-                    margin: -10px;
-                    display: flex;
-                    align-items: center;
-                    position: relative;
-                    span{
-                        padding-inline: 5px;
-                        font-size: 14px;
-                        position: absolute;
-                        &.next{
-                            left: -45px;
-                        }
-                        &.last{
-                            right: -55px;
-                        }
-                    }
-                }
-            }
-        }
-
-        // Step one
-        #stepOne{
-           #toLastStep{
-            opacity: 0 !important;
-            pointer-events: none;
-           }
-           #stepOneError{
-            width: 100%;
-            padding: 20px 5px;
-            text-align: center;
-            display: none;
-            border: 2px solid rgba(192, 0, 0, 0.349);
-            margin-bottom: 20px;
-            h1{
-                color: #003A65;
-                font-size: 17px;
-            }
-            &.active{
-                display: block;
-            }
-           }
-           &.active{
-            display: block;
-            }
-           &.hidden{
-            display: none;
-           }
-        }
-
-        // Step two
-        #stepTwo{
-            display: none;
-            .inputs{
-                margin-top: 5px;
-                .hidden_checkbox{
-                    opacity: 0;
-                    pointer-events: none;
-                    width: 0;
-                    height: 0;
-                    position: absolute;
-                }
-            }
-            .checkbox{
-                width: 100%;
-                padding: 15px 10px;
-                border-radius: 30px;
-                outline: none;
-                border: 1px solid #0039657c;
-                text-align: center;
-                position: relative;
-                margin-block: 35px;
-                &:first-child{
-                    margin-top: 0;
-                }
-                &:last-child{
-                    margin-bottom: 0;
-                }
-                .supl-logo{
-                    width: 39px;
-                    height: auto;
-                    position: absolute;
-                    right: 25px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-                .name{
-                    font-size: 18px;
-                    transform: translateX(-18px) translateY(3px);
-                }
-                // Telia
-                &.telia{
-                    .name{
-                        color: #990AE3;
-                    }
-                }
-                // Telenor
-                &.telenor{
-                    .name{
-                        color: #00AEFE;
-                    }
-                }
-                // Altibox
-                &.altibox{
-                    .name{
-                        color: #FF271C;
-                    }
-                    .supl-logo{
-                        width: 53px;
-                    }
-                }
-            }
-            &.active{
-                display: block;
-            }
-            &.hidden{
-                display: none;
-            }
-        }
-
-        // Step three
-        #stepThree{
-            display: none;
-        }
-        #stepFour{
-            
-        }
-    }
-}
 
 
 

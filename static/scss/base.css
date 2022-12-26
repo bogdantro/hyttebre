@@ -1,9 +1,12 @@
 .cover {
-  height: 470px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   width: 100%;
   position: relative;
-  padding-top: 70px;
+  padding-top: 0;
   display: block;
+  padding: 85px 30px;
 }
 .cover .scroll-downs {
   display: none;
@@ -14,18 +17,12 @@
   position: absolute;
   left: 0;
   top: 0;
-  filter: brightness(50%);
+  filter: brightness(58%);
   -o-object-fit: cover;
      object-fit: cover;
 }
 .cover .content {
-  padding: 30px 30px 0 30px;
   width: 100%;
-  transform: translateX(-50px);
-  opacity: 0;
-  transition: 0.6s;
-}
-.cover .content.active {
   opacity: 1;
   transform: translateX(0);
 }
@@ -44,31 +41,220 @@
   color: #FAF9F6;
   font-size: 18px;
 }
-.cover .content .cover-actions {
-  width: auto;
+
+.order {
+  width: 100%;
   height: auto;
-  margin-top: 30px;
-  position: relative;
+  text-align: center;
+  padding-inline: 15px;
+  margin-top: 20px;
 }
-.cover .content .cover-actions a {
-  display: block;
-  font-size: 17px;
-  text-decoration: none;
-  transition: 0.4s;
-  width: 220px;
+.order form {
+  background: linear-gradient(to bottom right, #003A65, #00599c);
   border-radius: 4px;
-  padding: 13px;
+  padding: 25px 5px;
+}
+.order form .form-heading {
+  color: #FAF9F6;
+  font-size: 24px;
+  font-weight: 600;
+}
+.order form .step {
+  width: 100%;
+  height: auto;
+  padding-inline: 20px;
+  padding-top: 22px;
+  padding-bottom: 8px;
+  text-align: center;
+  display: block;
+}
+.order form .step .step-heading {
+  color: #FAF9F6;
+  font-size: 22px;
+}
+.order form .step .paragraph {
+  padding-bottom: 16px;
+  font-size: 17px;
+  padding-inline: 15px;
+  color: #FAF9F6;
+}
+.order form .step .inputs {
+  width: 100%;
   text-align: center;
 }
-.cover .content .cover-actions a.primary {
-  color: #FAF9F6 !important;
-  border: 1px solid #FAF9F6;
-  background: rgba(180, 180, 180, 0.2);
+.order form .step .inputs input {
+  border-radius: 25px;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4666666667);
+  outline: none;
+  display: block;
+  margin-block: 35px;
+  padding: 12px;
+  font-size: 16px;
+  color: #FAF9F6;
 }
-.cover .content .cover-actions a.primary:active, .cover .content .cover-actions a.primary:hover {
-  transform: scale(1.1);
+.order form .step .inputs input::-moz-placeholder {
+  color: #FAF9F6;
+  opacity: 0.6;
 }
-
+.order form .step .inputs input:-ms-input-placeholder {
+  color: #FAF9F6;
+  opacity: 0.6;
+}
+.order form .step .inputs input::placeholder {
+  color: #FAF9F6;
+  opacity: 0.6;
+}
+.order form .step .inputs input:first-child {
+  margin-top: 0;
+}
+.order form .step .inputs input:last-child {
+  margin-bottom: 0;
+}
+.order form .step .step-actions {
+  margin-top: 33px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 7px;
+}
+.order form .step .step-actions i {
+  color: #FAF9F6;
+  font-size: 30px;
+  padding: 10px;
+  margin: -10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+}
+.order form .step .step-actions i span {
+  padding-inline: 5px;
+  font-size: 14px;
+  position: absolute;
+}
+.order form .step .step-actions i span.next {
+  left: -45px;
+}
+.order form .step .step-actions i span.last {
+  right: -55px;
+}
+.order form #stepOne #toLastStep {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+.order form #stepOne #stepOneError {
+  display: none;
+}
+.order form #stepOne #stepOneError.active {
+  display: block;
+}
+.order form #stepOne.active {
+  display: block;
+}
+.order form #stepOne.hidden {
+  display: none;
+}
+.order form #stepTwo {
+  display: none;
+}
+.order form #stepTwo #stepTwoError {
+  display: none;
+}
+.order form #stepTwo #stepTwoError.active {
+  display: block;
+}
+.order form #stepTwo .inputs {
+  margin-top: 5px;
+}
+.order form #stepTwo .inputs .hidden_checkbox {
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.order form #stepTwo .inputs #teliaCheckbox {
+  background: transparent;
+  transition: 0.2s;
+}
+.order form #stepTwo .inputs #teliaCheckbox.clicked {
+  transform: scale(1.05);
+  background: rgba(220, 220, 220, 0.1) !important;
+}
+.order form #stepTwo .inputs #telenorCheckbox {
+  background: transparent;
+  transition: 0.2s;
+}
+.order form #stepTwo .inputs #telenorCheckbox.clicked {
+  transform: scale(1.05);
+  background: rgba(220, 220, 220, 0.1) !important;
+}
+.order form #stepTwo .inputs #altiboxCheckbox {
+  background: transparent;
+  transition: 0.2s;
+}
+.order form #stepTwo .inputs #altiboxCheckbox.clicked {
+  transform: scale(1.05);
+  background: rgba(220, 220, 220, 0.1) !important;
+}
+.order form #stepTwo .checkbox {
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 30px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.4666666667);
+  text-align: center;
+  position: relative;
+  margin-block: 35px;
+}
+.order form #stepTwo .checkbox:first-child {
+  margin-top: 0;
+}
+.order form #stepTwo .checkbox:last-child {
+  margin-bottom: 0;
+}
+.order form #stepTwo .checkbox .supl-logo {
+  width: 39px;
+  height: auto;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.order form #stepTwo .checkbox .name {
+  font-size: 18px;
+  transform: translateX(-18px) translateY(3px);
+}
+.order form #stepTwo .checkbox.telia .name {
+  color: #FAF9F6;
+}
+.order form #stepTwo .checkbox.telenor .name {
+  color: #FAF9F6;
+}
+.order form #stepTwo .checkbox.altibox .name {
+  color: #FAF9F6;
+}
+.order form #stepTwo .checkbox.altibox .supl-logo {
+  width: 53px;
+}
+.order form #stepTwo.active {
+  display: block;
+}
+.order form #stepTwo.hidden {
+  display: none;
+}
+.order form #stepThree {
+  display: none;
+}
+.order form #stepThree.active {
+  display: block;
+}
+.order form #stepThree.hidden {
+  display: none;
+}
 .why-us {
   margin-top: 60px;
   width: 100%;
@@ -149,183 +335,6 @@
   font-weight: 700;
 }
 
-.order {
-  width: 100%;
-  height: auto;
-  margin-top: 60px;
-  text-align: center;
-}
-.order form .form-heading {
-  color: #003A65;
-  font-size: 36px;
-}
-.order form .step {
-  width: 100%;
-  height: auto;
-  padding-inline: 30px;
-  padding-top: 22px;
-  padding-bottom: 8px;
-  text-align: center;
-  display: block;
-}
-.order form .step .step-heading {
-  color: #003A65;
-  font-size: 22px;
-}
-.order form .step .paragraph {
-  padding-bottom: 16px;
-  font-size: 17px;
-  padding-inline: 15px;
-}
-.order form .step .inputs {
-  width: 100%;
-  text-align: center;
-}
-.order form .step .inputs input {
-  border-radius: 25px;
-  width: 100%;
-  height: 50px;
-  background: transparent;
-  border: 1px solid rgba(0, 57, 101, 0.2549019608);
-  outline: none;
-  display: block;
-  margin-block: 35px;
-  padding: 12px;
-  font-size: 16px;
-  color: #003A65;
-}
-.order form .step .inputs input::-moz-placeholder {
-  color: #003A65;
-  opacity: 0.6;
-}
-.order form .step .inputs input:-ms-input-placeholder {
-  color: #003A65;
-  opacity: 0.6;
-}
-.order form .step .inputs input::placeholder {
-  color: #003A65;
-  opacity: 0.6;
-}
-.order form .step .inputs input:first-child {
-  margin-top: 0;
-}
-.order form .step .inputs input:last-child {
-  margin-bottom: 0;
-}
-.order form .step .step-actions {
-  margin-top: 33px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-inline: 7px;
-}
-.order form .step .step-actions i {
-  color: #003A65;
-  font-size: 30px;
-  padding: 10px;
-  margin: -10px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.order form .step .step-actions i span {
-  padding-inline: 5px;
-  font-size: 14px;
-  position: absolute;
-}
-.order form .step .step-actions i span.next {
-  left: -45px;
-}
-.order form .step .step-actions i span.last {
-  right: -55px;
-}
-.order form #stepOne #toLastStep {
-  opacity: 0 !important;
-  pointer-events: none;
-}
-.order form #stepOne #stepOneError {
-  width: 100%;
-  padding: 20px 5px;
-  text-align: center;
-  display: none;
-  border: 2px solid rgba(192, 0, 0, 0.349);
-  margin-bottom: 20px;
-}
-.order form #stepOne #stepOneError h1 {
-  color: #003A65;
-  font-size: 17px;
-}
-.order form #stepOne #stepOneError.active {
-  display: block;
-}
-.order form #stepOne.active {
-  display: block;
-}
-.order form #stepOne.hidden {
-  display: none;
-}
-.order form #stepTwo {
-  display: none;
-}
-.order form #stepTwo .inputs {
-  margin-top: 5px;
-}
-.order form #stepTwo .inputs .hidden_checkbox {
-  opacity: 0;
-  pointer-events: none;
-  width: 0;
-  height: 0;
-  position: absolute;
-}
-.order form #stepTwo .checkbox {
-  width: 100%;
-  padding: 15px 10px;
-  border-radius: 30px;
-  outline: none;
-  border: 1px solid rgba(0, 57, 101, 0.4862745098);
-  text-align: center;
-  position: relative;
-  margin-block: 35px;
-}
-.order form #stepTwo .checkbox:first-child {
-  margin-top: 0;
-}
-.order form #stepTwo .checkbox:last-child {
-  margin-bottom: 0;
-}
-.order form #stepTwo .checkbox .supl-logo {
-  width: 39px;
-  height: auto;
-  position: absolute;
-  right: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.order form #stepTwo .checkbox .name {
-  font-size: 18px;
-  transform: translateX(-18px) translateY(3px);
-}
-.order form #stepTwo .checkbox.telia .name {
-  color: #990AE3;
-}
-.order form #stepTwo .checkbox.telenor .name {
-  color: #00AEFE;
-}
-.order form #stepTwo .checkbox.altibox .name {
-  color: #FF271C;
-}
-.order form #stepTwo .checkbox.altibox .supl-logo {
-  width: 53px;
-}
-.order form #stepTwo.active {
-  display: block;
-}
-.order form #stepTwo.hidden {
-  display: none;
-}
-.order form #stepThree {
-  display: none;
-}
 @media only screen and (min-device-width: 1150px) {
   .cover {
     display: block;
