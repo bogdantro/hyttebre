@@ -162,7 +162,7 @@
   text-decoration: none;
   transition: 0.4s;
 }
-#mobileNav .sidebar .links a.order {
+#mobileNav .sidebar .links a.nav_order {
   background: #003A65;
   color: #FAF9F6;
   padding: 8px 18px !important;
@@ -171,7 +171,7 @@
   width: max-content;
   border-radius: 4px;
 }
-#mobileNav .sidebar .links a.order:active, #mobileNav .sidebar .links a.order:hover {
+#mobileNav .sidebar .links a.nav_order:active, #mobileNav .sidebar .links a.nav_order:hover {
   transform: scale(1.1);
   background: #054372;
 }
@@ -244,11 +244,12 @@
   #desNav.sticky .menu a:hover {
     border-bottom: 2px solid rgba(5, 67, 114, 0.7333333333);
   }
-  #desNav.sticky .menu a.order {
+  #desNav.sticky .menu a.nav_order {
     background: #003A65;
     border-radius: 4px;
+    color: #FAF9F6;
   }
-  #desNav.sticky .menu a.order:hover {
+  #desNav.sticky .menu a.nav_order:hover {
     background: #075189;
     border-bottom: 2px solid transparent;
   }
@@ -264,7 +265,7 @@
   }
   #desNav .logo h1 {
     font-size: 23px;
-    color: #FAF9F6;
+    color: #003A65;
     transition: 0.3s;
   }
   #desNav .logo h1 span {
@@ -279,7 +280,7 @@
   #desNav .menu a {
     padding-inline: 10px;
     margin-inline: 5px;
-    color: #FAF9F6;
+    color: #003A65;
     font-size: 17px;
     opacity: 0.9;
     cursor: pointer;
@@ -288,12 +289,12 @@
     text-decoration: none;
     border-bottom: 2px solid transparent;
   }
-  #desNav .menu a.order {
+  #desNav .menu a.nav_order {
     padding: 10px 20px;
-    color: #FAF9F6;
+    color: #003A65;
     transition: 0.2s;
   }
-  #desNav .menu a.order:active, #desNav .menu a.order:hover {
+  #desNav .menu a.nav_order:active, #desNav .menu a.nav_order:hover {
     transform: scale(1.1);
   }
   #desNav .menu a:hover {

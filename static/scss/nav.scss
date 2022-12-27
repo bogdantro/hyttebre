@@ -176,7 +176,7 @@
                 text-decoration: none;
                 transition: .4s;
                 // CTA button
-                &.order{
+                &.nav_order{
                     background: #003A65;
                     color: #FAF9F6;
                     padding: 8px 18px !important;
@@ -268,9 +268,10 @@
                     &:hover{
                         border-bottom: 2px solid #054372bb;
                     }
-                    &.order{
+                    &.nav_order{
                         background: #003A65;
                         border-radius: 4px;
+                        color: #FAF9F6;
                         &:hover{
                             background: #075189;
                             border-bottom: 2px solid transparent;
@@ -291,7 +292,7 @@
             cursor: pointer;
             h1{
                 font-size: 23px;
-                color: #FAF9F6;
+                color: #003A65;
                 transition: .3s;
                 span{
                     font-size: 16px;
@@ -311,7 +312,7 @@
             a{
                 padding-inline: 10px;
                 margin-inline: 5px;
-                color: #FAF9F6;
+                color: #003A65;
                 font-size: 17px;
                 opacity: 0.9;
                 cursor: pointer;
@@ -320,9 +321,9 @@
                 text-decoration: none;
                 border-bottom: 2px solid transparent;
                 // CTA button
-                &.order{
+                &.nav_order{
                     padding: 10px 20px;
-                    color: #FAF9F6;
+                    color: #003A65;
                     transition: .2s;
                     // When button clicked / hover
                     &:active, &:hover{

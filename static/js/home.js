@@ -53,6 +53,7 @@ function toStepThree(){
         stepTwo.classList.remove('active')        
         stepTwo.classList.add('hidden')
         
+        stepThree.classList.remove('hidden')
         stepThree.classList.add('active')
         document.getElementById('stepTwoError').classList.remove('active');
     }else{
