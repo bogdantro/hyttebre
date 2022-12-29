@@ -21,6 +21,10 @@ html, body {
   scroll-behavior: smooth !important;
 }
 
+.page {
+  min-height: 90vh !important;
+}
+
 p.paragraph {
   opacity: 0.8;
   box-sizing: border-box;

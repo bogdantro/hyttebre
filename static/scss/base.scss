@@ -3,7 +3,6 @@
     height: max-content;
     width: 100%;
     position: relative;
-    padding-top: 0;
     display: block;
     padding: 95px 30px;
     padding-bottom: 50px;
@@ -354,56 +353,6 @@
     }
 }
 
-// Why us
-.why-us{
-    margin-top: 60px;
-    width: 100%;
-    height: auto;
-    background: linear-gradient(to bottom right, #003A65, #00599c);
-    // Content
-    .content{
-        padding: 45px 30px;
-        // Text
-        .text{
-            .headingp{
-                color: #FAF9F6;
-            }
-            h1{
-                color: #faf9f6ef;
-                font-size: 32px;
-                font-weight: 400;
-                margin-top: 6px;
-                // Måtte skrive det her pgav den var ikke lina bra
-                transform: translateX(-2px);
-                // //
-            }
-        }
-    }
-}
-
-// What we do
-.what-we-do{
-    margin-top: 30px;
-    width: 100%;
-    height: auto;
-    // Content
-    .content{
-        padding: 45px 30px;
-        // Text
-        .text{
-            h1{
-                color: #003A65;
-                font-size: 32px;
-                font-weight: 400;
-                margin-top: 6px;
-                // Måtte skrive det her pgav den var ikke lina bra
-                transform: translateX(-2px);
-                // //
-            }
-        }
-    }
-}
-
 // Process
 .process{
     margin-top: 80px;
@@ -457,6 +406,97 @@
     }
 }
 
+// Why us
+.why-us{
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to bottom right, #003A65, #00599c);
+    // Content
+    .content{
+        padding: 45px 30px;
+        // Text
+        .text{
+            .headingp{
+                color: #FAF9F6;
+            }
+            h1{
+                color: #faf9f6ef;
+                font-size: 32px;
+                font-weight: 400;
+                margin-top: 6px;
+                // Måtte skrive det her pgav den var ikke lina bra
+                transform: translateX(-2px);
+                // //
+            }
+        }
+        // Cards
+        .cards{
+            margin-top: 25px;
+            .card{
+                margin-block: 38px;
+                padding: 23px 12px;
+                background: #E7FDFF;
+                width: 100%;
+                height: auto;
+                border-radius: 4px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                .icon{
+                    width: 25%;
+                    i{
+                        margin: auto;
+                        transform: translateX(10px);
+                        color: #003A65;
+                        font-size: 31px;
+                        font-weight: 800;
+                    }
+                }
+                .card-text{
+                    width: 75%;
+                    h1{
+                        color: #003A65;
+                        font-size: 22px;
+                        margin-bottom: 3px;
+                    }
+                    .paragraph{
+                        color: #003A65;
+                    }
+                }
+                &:first-child{
+                    margin-top: 0;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+// What we do
+.what-we-do{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    // Content
+    .content{
+        padding: 45px 30px;
+        // Text
+        .text{
+            h1{
+                color: #003A65;
+                font-size: 32px;
+                font-weight: 400;
+                margin-top: 6px;
+                // Måtte skrive det her pgav den var ikke lina bra
+                transform: translateX(-2px);
+                // //
+            }
+        }
+    }
+}
 
 
 
@@ -473,42 +513,6 @@
         min-height: 570px;
         max-height: 630px;
         background: linear-gradient(to right, #E7FDFF, white);
-        // Mouse scroll
-        .scroll-downs {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            margin: auto;
-            display: block;
-            width :34px;
-            height: 55px;
-            z-index: 10000;
-            .mousey {
-                width: 3px;
-                padding: 10px 15px;
-                height: 35px;
-                border: 2px solid transparent;
-                border-radius: 25px;
-                opacity: 0.75;
-                box-sizing: content-box;
-            }
-            .scroller {
-                width: 3px;
-                height: 20px;
-                border-radius: 25%;
-                background-color: #fff;
-                animation-name: scroll;
-                animation-duration: 2.2s;
-                animation-timing-function: cubic-bezier(.15,.41,.69,.94);
-                animation-iteration-count: infinite;
-            }
-        }
-          @keyframes scroll {
-            0% { opacity: 0; }
-            10% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(25px); opacity: 0;}
-          }
         // Content
         .content{
             padding-inline: 80px;
@@ -851,7 +855,7 @@
     // Process
     .process{
         margin-top: 0;
-        padding-top: 135px;
+        padding-top: 145px;
         width: 100%;
         height: auto;
         background: linear-gradient(to top right, #E7FDFF, #E7FDFF, white);
@@ -907,6 +911,109 @@
                             max-width: 400px;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    // Why us
+    .why-us{
+        margin-top: 60px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom right, #003A65, #00599c);
+        // Content
+        .content{
+            padding: 45px 30px;
+            // Text
+            .text{
+                text-align: center;
+                .headingp{
+                    color: #FAF9F6;
+                }
+                h1{
+                    color: #faf9f6ef;
+                    font-size: 36px;
+                    font-weight: 400;
+                    margin-top: 6px;
+                    // Måtte skrive det her pgav den var ikke lina bra
+                    transform: translateX(0px);
+                    // //
+                }
+            }
+            // Cards
+            .cards{
+                margin-top: 25px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                .card{
+                    margin-inline: 25px;
+                    margin-block: 20px;
+                    padding: 23px 10px;
+                    background: #E7FDFF;
+                    min-width: 360px;
+                    max-width: 360px;
+                    height: auto;
+                    border-radius: 4px;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    .icon{
+                        width: 25%;
+                        i{
+                            margin: auto;
+                            transform: translateX(10px);
+                            color: #003A65;
+                            font-size: 31px;
+                            font-weight: 800;
+                        }
+                    }
+                    .card-text{
+                        width: 75%;
+                        h1{
+                            color: #003A65;
+                            font-size: 22px;
+                            margin-bottom: 3px;
+                        }
+                        .paragraph{
+                            color: #003A65;
+                        }
+                    }
+                    &:first-child{
+                        margin-top: 20px;
+                    }
+                    &:last-child{
+                        margin-bottom: 20px;
+                        min-width: 480px;
+                        max-width: 480px;    
+                    }
+                }
+            }
+        }
+    }
+
+    // What we do
+    .what-we-do{
+        margin-top: 30px;
+        width: 100%;
+        height: auto;
+        // Content
+        .content{
+            padding: 45px 85px;
+            // Text
+            .text{
+                text-align: center;
+                h1{
+                    color: #003A65;
+                    font-size: 36px;
+                    font-weight: 400;
+                    margin-top: 6px;
+                    // Måtte skrive det her pgav den var ikke lina bra
+                    transform: translateX(0);
+                    // //
                 }
             }
         }

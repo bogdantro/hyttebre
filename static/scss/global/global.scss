@@ -25,6 +25,12 @@ $loader: rgb(80, 104, 180);
   }
   @media only screen and (min-device-width: 1450px) {
   }
+
+
+.page{
+  min-height: 90vh !important;
+}
+
   // global text
 p{
   &.paragraph{

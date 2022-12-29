@@ -6,4 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('suksee/', order_success, name='order_success'),
+    path('om-oss/', about, name='about'),
 ]
