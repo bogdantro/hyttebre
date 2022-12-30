@@ -1023,9 +1023,359 @@
 
 // #2 breakpoint
 @media only screen and (min-device-width: 1450px)  {
+     // Cover
+     .cover{
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        height: max-content;
+        min-height: 570px;
+        max-height: 630px;
+        background: linear-gradient(to right, #E7FDFF, white);
+        // Content
+        .content{
+            padding-inline: 180px;
+            padding-bottom: 10px;
+            padding-top: 150px;
+            // Text
+            .text{
+                position: relative;
+                text-align: left;
+                h1{
+                    color: #003A65;
+                    font-size: 46px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    color: #003A65;
+                    font-size: 18px;
+                    width: 380px;
+                }
+            }
+        }
+    }
+
+     // Order
+     .order{
+        width: 100%;
+        max-width: 430px;
+        height: auto;
+        text-align: center;
+        padding-inline: 15px;
+        margin: 0 auto;
+        position: absolute;
+        top: 125px;
+        right: 180px;
+        // Form
+        form{
+            background: linear-gradient(to bottom right, #003A65, #00599c);
+            border-radius: 4px;
+            background: #d6fbff;
+            padding: 25px 5px;
+            .form-heading{
+                color: #003A65;
+                font-size: 24px;
+                font-weight: 600;
+            }
+            // Step
+            .step{
+                width: 100%;
+                height: auto;
+                padding-inline: 20px;
+                padding-top: 22px;
+                padding-bottom: 8px;
+                text-align: center;
+                display: block;
+                .paragraph{
+                    padding-bottom: 16px;
+                    font-size: 17px;
+                    padding-inline: 15px;
+                    color: #003A65;
+                }
+                .inputs{
+                    width: 100%;
+                    text-align: center;
+                    input{
+                        border-radius: 25px;
+                        width: 100%;
+                        height: 50px;
+                        background: transparent;
+                        border: 1px solid #00396588;
+                        outline: none;
+                        display: block;
+                        margin-block: 35px;
+                        padding: 12px;
+                        font-size: 16px;
+                        color: #003A65;
+                        cursor: pointer;
+                        &::placeholder{
+                            color: #003A65;
+                            opacity: 0.6;
+                        }
+                        &:hover{
+                            background: #eefdff;
+                        }
+                        &:active, &:focus{
+                            background: transparent;
+                            border-width: 2px;
+                        }
+                        &:first-child{
+                            margin-top: 0;
+                        }
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                // Actions
+                .step-actions{
+                    margin-top: 33px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-inline: 7px;
+                    i{
+                        color: #003A65;
+                        font-size: 30px;
+                        padding: 10px;
+                        margin: -10px;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        font-weight: 600;
+                        span{
+                            padding-inline: 5px;
+                            font-size: 14px;
+                            position: absolute;
+                            &.next{
+                                left: -45px;
+                            }
+                            &.last{
+                                right: -55px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Step one
+            #stepOne{
+            #toLastStep{
+                opacity: 0 !important;
+                pointer-events: none;
+            }
+            #stepOneError{
+                display: none;
+                &.active{
+                    display: block;
+                }
+            }
+            &.active{
+                display: block;
+                }
+            &.hidden{
+                display: none;
+            }
+            }
+
+            // Step two
+            #stepTwo{
+                display: none;
+                #stepTwoError{
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+                }
+                .inputs{
+                    margin-top: 5px;
+                    .hidden_checkbox{
+                        opacity: 0;
+                        pointer-events: none;
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                    }
+                    // Checkboxes
+                    #teliaCheckbox{
+                        background: transparent;
+                        transition: .2s;
+                        &.clicked{
+                            transform: scale(1.05);
+                            background: rgba(140, 140, 140, 0.1) !important;
+                        }
+                    }
+                    #telenorCheckbox{
+                        background: transparent;
+                        transition: .2s;
+                        &.clicked{
+                            transform: scale(1.05);
+                            background: rgba(140, 140, 140, 0.1) !important;
+                        }
+                    }
+                    #altiboxCheckbox{
+                        background: transparent;
+                        transition: .2s;
+                        &.clicked{
+                            transform: scale(1.05);
+                            background: rgba(140, 140, 140, 0.1) !important;
+                        }
+                    }
+                }
+                .checkbox{
+                    width: 100%;
+                    padding: 15px 10px;
+                    border-radius: 30px;
+                    outline: none;
+                    border: 1px solid #00396588;
+                    text-align: center;
+                    position: relative;
+                    margin-block: 35px;
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    .supl-logo{
+                        width: 39px;
+                        height: auto;
+                        position: absolute;
+                        right: 25px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    .name{
+                        font-size: 18px;
+                        transform: translateX(-18px) translateY(3px);
+                    }
+                    // Telia
+                    &.telia{
+                        .name{
+                            color: #990AE3;
+                        }
+                    }
+                    // Telenor
+                    &.telenor{
+                        .name{
+                            color: #00AEFE;
+                        }
+                    }
+                    // Altibox
+                    &.altibox{
+                        .name{
+                            color: #FF271C;
+                        }
+                        .supl-logo{
+                            width: 53px;
+                        }
+                    }
+                }
+                &.active{
+                    display: block;
+                }
+                &.hidden{
+                    display: none;
+                }
+            }
+
+            // Step three
+            #stepThree{
+                display: none;
+                #stepThreeError{
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+                }
+                &.active{
+                    display: block;
+                    }
+                &.hidden{
+                    display: none;
+                }
+            }
+            
+            // Step four
+            #stepFour{
+                display: none;
+                button{
+                    width: 80%;
+                    color: #FAF9F6;
+                    padding: 15px;
+                    background: #003A65;
+                    outline: none;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: .2s;
+                    font-weight: 400;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                #stepFourError{
+                display: none;
+                &.active{
+                    display: block;
+                }
+                }
+                .hidden_checkbox{
+                    opacity: 0;
+                    pointer-events: none;
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                }
+                .checkbox{
+                    width: 100%;
+                    padding: 15px 10px;
+                    border-radius: 30px;
+                    outline: none;
+                    border: 1px solid #00396588;
+                    text-align: center;
+                    position: relative;
+                    margin-block: 35px;
+                    transition: .2s;
+                    i{
+                        position: absolute;
+                        right: 35px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        color: #003A65;
+                        font-size: 24px;
+                    }
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    &.clicked{
+                        transform: scale(1.05);
+                        background: rgba(140, 140, 140, 0.1) !important;
+                    }
+                    .name{
+                        font-size: 18px;
+                        transform: translateX(-18px) translateY(3px);
+                        color: #003A65;
+                    }
+                }
+                &.active{
+                display: block;
+                }
+                &.hidden{
+                display: none;
+                }
+            }
+        }
+    }
+
     // Process
     .process{
-        margin-top: 125px;
+        padding-top: 140px;
         width: 100%;
         height: auto;
         // Content
@@ -1084,6 +1434,109 @@
             }
         }
     }
+
+    // Why us
+    .why-us{
+        margin-top: 60px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom right, #003A65, #00599c);
+        // Content
+        .content{
+            padding: 75px 30px;
+            // Text
+            .text{
+                text-align: center;
+                .headingp{
+                    color: #FAF9F6;
+                }
+                h1{
+                    color: #faf9f6ef;
+                    font-size: 36px;
+                    font-weight: 400;
+                    margin-top: 6px;
+                    // Måtte skrive det her pgav den var ikke lina bra
+                    transform: translateX(0px);
+                    // //
+                }
+            }
+            // Cards
+            .cards{
+                margin-top: 25px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                .card{
+                    margin-inline: 25px;
+                    margin-block: 20px;
+                    padding: 23px 10px;
+                    background: #E7FDFF;
+                    min-width: 360px;
+                    max-width: 360px;
+                    height: auto;
+                    border-radius: 4px;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    .icon{
+                        width: 25%;
+                        i{
+                            margin: auto;
+                            transform: translateX(10px);
+                            color: #003A65;
+                            font-size: 31px;
+                            font-weight: 800;
+                        }
+                    }
+                    .card-text{
+                        width: 75%;
+                        h1{
+                            color: #003A65;
+                            font-size: 22px;
+                            margin-bottom: 3px;
+                        }
+                        .paragraph{
+                            color: #003A65;
+                        }
+                    }
+                    &:first-child{
+                        margin-top: 20px;
+                    }
+                    &:last-child{
+                        margin-bottom: 20px;
+                        min-width: 360px;
+                        max-width: 360px;    
+                    }
+                }
+            }
+        }
+    }
+
+     // What we do
+     .what-we-do{
+        margin-top: 30px;
+        width: 100%;
+        height: auto;
+        // Content
+        .content{
+            padding: 75px 265px;
+            // Text
+            .text{
+                text-align: center;
+                h1{
+                    color: #003A65;
+                    font-size: 36px;
+                    font-weight: 400;
+                    margin-top: 6px;
+                    // Måtte skrive det her pgav den var ikke lina bra
+                    transform: translateX(0);
+                    // //
+                }
+            }
+        }
+    }
 }
 
 
@@ -1091,9 +1544,10 @@
 @media only screen and (min-device-width: 1550px)  {
     // Process
     .process{
-        margin-top: 125px;
+        padding-top: 185px;
         width: 100%;
         height: auto;
+        background: linear-gradient(to top right, #E7FDFF, #E7FDFF, white);
         // Content
         .content{
             padding-inline: 40px;

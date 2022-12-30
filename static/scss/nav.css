@@ -29,11 +29,11 @@
 }
 #mobileNav.sticky {
   transition: 0.2s !important;
-  box-shadow: 0 1px 5px rgba(70, 70, 70, 0.1);
 }
 #mobileNav.sticky::before {
   top: 0;
   opacity: 1;
+  box-shadow: 0 2px 4px rgba(40, 40, 40, 0.1);
 }
 #mobileNav.sticky .logo h1 {
   color: #003A65;
@@ -298,6 +298,103 @@
     transform: scale(1.1);
   }
   #desNav .menu a:hover {
-    border-bottom: 2px solid rgba(250, 249, 246, 0.5607843137);
+    border-bottom: 2px solid rgba(0, 57, 101, 0.6705882353);
+  }
+}
+@media only screen and (min-device-width: 1450px) {
+  #desNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    transition: 0;
+    background: transparent;
+    padding: 20px 80px;
+    background: rgba(250, 250, 250, 0.05);
+  }
+  #desNav::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    background: rgba(231, 253, 255, 0.9450980392);
+    left: 0;
+    top: -20px;
+    opacity: 0;
+    transition: 0.4s;
+  }
+  #desNav.sticky {
+    box-shadow: 0 1px 5px rgba(70, 70, 70, 0.1);
+  }
+  #desNav.sticky::before {
+    top: 0;
+    opacity: 1;
+  }
+  #desNav.sticky .menu a {
+    color: #003A65;
+  }
+  #desNav.sticky .menu a:hover {
+    border-bottom: 2px solid rgba(5, 67, 114, 0.7333333333);
+  }
+  #desNav.sticky .menu a.nav_order {
+    background: #003A65;
+    border-radius: 4px;
+    color: #FAF9F6;
+  }
+  #desNav.sticky .menu a.nav_order:hover {
+    background: #075189;
+    border-bottom: 2px solid transparent;
+  }
+  #desNav.sticky .logo h1 {
+    color: #003A65 !important;
+  }
+  #desNav .logo {
+    z-index: 1000;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    cursor: pointer;
+  }
+  #desNav .logo h1 {
+    font-size: 23px;
+    color: #003A65;
+    transition: 0.3s;
+  }
+  #desNav .logo h1 span {
+    font-size: 16px;
+    border-bottom: 1px solid rgba(190, 190, 190, 0.4392156863);
+    padding-bottom: 2px;
+    margin-left: 4px;
+  }
+  #desNav .logo h1:hover {
+    transform: scale(1.05);
+  }
+  #desNav .menu a {
+    padding-inline: 10px;
+    margin-inline: 5px;
+    color: #003A65;
+    font-size: 17px;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: 0.4s;
+    padding-bottom: 5px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+  }
+  #desNav .menu a.nav_order {
+    padding: 10px 20px;
+    color: #003A65;
+    transition: 0.2s;
+  }
+  #desNav .menu a.nav_order:active, #desNav .menu a.nav_order:hover {
+    transform: scale(1.1);
+  }
+  #desNav .menu a:hover {
+    border-bottom: 2px solid rgba(0, 57, 101, 0.6705882353);
   }
 }/*# sourceMappingURL=nav.css.map */

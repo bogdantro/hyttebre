@@ -38,3 +38,41 @@
         }
     }
 }
+
+// #1 breakpoint
+@media only screen and (min-device-width: 1150px)  {
+    // About us
+    .about-us{
+        .cover{
+            padding: 105px 40px;
+            .paragraph{
+                padding-right: 500px;
+            }
+        }
+    }
+ 
+        // Desktop navbar
+        #desNav{
+            // Logo
+            .logo{
+                h1{
+                    color: #FAF9F6;
+                    span{
+                        border-bottom: 1px solid #faf9f694;
+                    }
+                }
+            }
+            // Menu
+            .menu{
+                // Links
+                a{
+                    color: #FAF9F6;
+                    border-bottom: 2px solid transparent;
+                    // CTA button
+                    &.nav_order{
+                        color: #FAF9F6;
+                    }
+                }
+            }
+        }
+}

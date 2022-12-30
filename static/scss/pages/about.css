@@ -27,4 +27,26 @@
 }
 .about-us .cover .paragraph {
   color: #FAF9F6;
+}
+
+@media only screen and (min-device-width: 1150px) {
+  .about-us .cover {
+    padding: 105px 40px;
+  }
+  .about-us .cover .paragraph {
+    padding-right: 500px;
+  }
+  #desNav .logo h1 {
+    color: #FAF9F6;
+  }
+  #desNav .logo h1 span {
+    border-bottom: 1px solid rgba(250, 249, 246, 0.5803921569);
+  }
+  #desNav .menu a {
+    color: #FAF9F6;
+    border-bottom: 2px solid transparent;
+  }
+  #desNav .menu a.nav_order {
+    color: #FAF9F6;
+  }
 }/*# sourceMappingURL=about.css.map */
