@@ -517,7 +517,7 @@
         .content{
             padding-inline: 80px;
             padding-bottom: 10px;
-            padding-top: 150px;
+            padding-top: 130px;
             // Text
             .text{
                 position: relative;
@@ -545,14 +545,15 @@
         padding-inline: 15px;
         margin: 0 auto;
         position: absolute;
-        top: 125px;
+        top: 90px;
         right: 80px;
         // Form
         form{
             background: linear-gradient(to bottom right, #003A65, #00599c);
             border-radius: 4px;
             background: #d6fbff;
-            padding: 25px 5px;
+            padding: 15px 5px;
+            padding-bottom: 5px;
             .form-heading{
                 color: #003A65;
                 font-size: 24px;
@@ -615,6 +616,7 @@
                     justify-content: space-between;
                     align-items: center;
                     padding-inline: 7px;
+                    cursor: pointer;
                     i{
                         color: #003A65;
                         font-size: 30px;
@@ -625,15 +627,24 @@
                         position: relative;
                         font-weight: 600;
                         span{
+                            padding-bottom: 5px;
+                            margin-bottom: -5px;
                             padding-inline: 5px;
+                            transition: .4s;
                             font-size: 14px;
                             position: absolute;
+                            border-bottom: 2px solid transparent;
                             &.next{
                                 left: -45px;
                             }
                             &.last{
                                 right: -55px;
                             }
+                        }
+                    }
+                    &:hover{
+                        span{
+                            border-bottom: 2px solid #003A65;
                         }
                     }
                 }
@@ -670,6 +681,7 @@
                 }
                 .inputs{
                     margin-top: 5px;
+                    cursor: pointer;
                     .hidden_checkbox{
                         opacity: 0;
                         pointer-events: none;
@@ -681,25 +693,34 @@
                     #teliaCheckbox{
                         background: transparent;
                         transition: .2s;
+                        &:hover{
+                            background: rgba(140, 140, 140, 0.1);
+                        }
                         &.clicked{
                             transform: scale(1.05);
-                            background: rgba(140, 140, 140, 0.1) !important;
+                            background: rgba(110, 110, 110, 0.1) !important;
                         }
                     }
                     #telenorCheckbox{
                         background: transparent;
                         transition: .2s;
+                        &:hover{
+                            background: rgba(140, 140, 140, 0.1);
+                        }
                         &.clicked{
                             transform: scale(1.05);
-                            background: rgba(140, 140, 140, 0.1) !important;
+                            background: rgba(110, 110, 110, 0.1) !important;
                         }
                     }
                     #altiboxCheckbox{
                         background: transparent;
                         transition: .2s;
+                        &:hover{
+                            background: rgba(140, 140, 140, 0.1);
+                        }
                         &.clicked{
                             transform: scale(1.05);
-                            background: rgba(140, 140, 140, 0.1) !important;
+                            background: rgba(110, 110, 110, 0.1) !important;
                         }
                     }
                 }
@@ -818,6 +839,7 @@
                     position: relative;
                     margin-block: 35px;
                     transition: .2s;
+                    cursor: pointer;
                     i{
                         position: absolute;
                         right: 35px;
@@ -832,9 +854,12 @@
                     &:last-child{
                         margin-bottom: 0;
                     }
+                    &:hover{
+                        background: rgba(140, 140, 140, 0.1);
+                    }
                     &.clicked{
                         transform: scale(1.05);
-                        background: rgba(140, 140, 140, 0.1) !important;
+                        background: rgba(110, 110, 110, 0.1) !important;
                     }
                     .name{
                         font-size: 18px;

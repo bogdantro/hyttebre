@@ -473,7 +473,7 @@
   .cover .content {
     padding-inline: 80px;
     padding-bottom: 10px;
-    padding-top: 150px;
+    padding-top: 130px;
   }
   .cover .content .text {
     position: relative;
@@ -497,14 +497,15 @@
     padding-inline: 15px;
     margin: 0 auto;
     position: absolute;
-    top: 125px;
+    top: 90px;
     right: 80px;
   }
   .order form {
     background: linear-gradient(to bottom right, #003A65, #00599c);
     border-radius: 4px;
     background: #d6fbff;
-    padding: 25px 5px;
+    padding: 15px 5px;
+    padding-bottom: 5px;
   }
   .order form .form-heading {
     color: #003A65;
@@ -575,6 +576,7 @@
     justify-content: space-between;
     align-items: center;
     padding-inline: 7px;
+    cursor: pointer;
   }
   .order form .step .step-actions i {
     color: #003A65;
@@ -587,15 +589,22 @@
     font-weight: 600;
   }
   .order form .step .step-actions i span {
+    padding-bottom: 5px;
+    margin-bottom: -5px;
     padding-inline: 5px;
+    transition: 0.4s;
     font-size: 14px;
     position: absolute;
+    border-bottom: 2px solid transparent;
   }
   .order form .step .step-actions i span.next {
     left: -45px;
   }
   .order form .step .step-actions i span.last {
     right: -55px;
+  }
+  .order form .step .step-actions:hover span {
+    border-bottom: 2px solid #003A65;
   }
   .order form #stepOne #toLastStep {
     opacity: 0 !important;
@@ -624,6 +633,7 @@
   }
   .order form #stepTwo .inputs {
     margin-top: 5px;
+    cursor: pointer;
   }
   .order form #stepTwo .inputs .hidden_checkbox {
     opacity: 0;
@@ -636,25 +646,34 @@
     background: transparent;
     transition: 0.2s;
   }
+  .order form #stepTwo .inputs #teliaCheckbox:hover {
+    background: rgba(140, 140, 140, 0.1);
+  }
   .order form #stepTwo .inputs #teliaCheckbox.clicked {
     transform: scale(1.05);
-    background: rgba(140, 140, 140, 0.1) !important;
+    background: rgba(110, 110, 110, 0.1) !important;
   }
   .order form #stepTwo .inputs #telenorCheckbox {
     background: transparent;
     transition: 0.2s;
   }
+  .order form #stepTwo .inputs #telenorCheckbox:hover {
+    background: rgba(140, 140, 140, 0.1);
+  }
   .order form #stepTwo .inputs #telenorCheckbox.clicked {
     transform: scale(1.05);
-    background: rgba(140, 140, 140, 0.1) !important;
+    background: rgba(110, 110, 110, 0.1) !important;
   }
   .order form #stepTwo .inputs #altiboxCheckbox {
     background: transparent;
     transition: 0.2s;
   }
+  .order form #stepTwo .inputs #altiboxCheckbox:hover {
+    background: rgba(140, 140, 140, 0.1);
+  }
   .order form #stepTwo .inputs #altiboxCheckbox.clicked {
     transform: scale(1.05);
-    background: rgba(140, 140, 140, 0.1) !important;
+    background: rgba(110, 110, 110, 0.1) !important;
   }
   .order form #stepTwo .checkbox {
     width: 100%;
@@ -758,6 +777,7 @@
     position: relative;
     margin-block: 35px;
     transition: 0.2s;
+    cursor: pointer;
   }
   .order form #stepFour .checkbox i {
     position: absolute;
@@ -773,9 +793,12 @@
   .order form #stepFour .checkbox:last-child {
     margin-bottom: 0;
   }
+  .order form #stepFour .checkbox:hover {
+    background: rgba(140, 140, 140, 0.1);
+  }
   .order form #stepFour .checkbox.clicked {
     transform: scale(1.05);
-    background: rgba(140, 140, 140, 0.1) !important;
+    background: rgba(110, 110, 110, 0.1) !important;
   }
   .order form #stepFour .checkbox .name {
     font-size: 18px;
